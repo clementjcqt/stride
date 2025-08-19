@@ -10,8 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_18_154402) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "location"
+    t.date "date"
+    t.string "event_type"
+    t.float "distance_km"
+    t.text "description"
+    t.string "difficulty"
+    t.integer "denivele"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "program_id", null: false
+    t.boolean "registered"
+    t.time "goal_time"
+    t.integer "max_weekly_distance_km"
+    t.string "training_type_preference"
+    t.time "run_time_begins"
+    t.time "run_time_ending"
+    t.integer "prep_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_goals_on_event_id"
+    t.index ["program_id"], name: "index_goals_on_program_id"
+    t.index ["user_id"], name: "index_goals_on_user_id"
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "gender"
+    t.string "country"
+    t.integer "age"
+    t.integer "height"
+    t.integer "weight"
+    t.string "level"
+    t.string "availability"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "conditions"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "goals", "events"
+  add_foreign_key "goals", "programs"
+  add_foreign_key "goals", "users"
 end

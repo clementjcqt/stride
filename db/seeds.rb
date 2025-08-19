@@ -9,6 +9,7 @@
 #   end
 
 
+
 # require "ruby_llm"
 # require "dotenv/load"
 
@@ -78,3 +79,12 @@ puts JSON.parse(response.content)["program"].each do |week|
     Session.program = program
   end
 end
+
+p "starting seeding..."
+unless User.find_by(email: "toto@toto.fr")
+  User.create(email: "toto@toto.fr", password: "123456")
+end
+
+p "user created: #{User.last.email}"
+
+p 'finished seeding'
