@@ -1,0 +1,202 @@
+{
+  "program": [
+    {
+      "week_number": 1,
+      "sessions": [
+        {
+          "date": "2025-08-23",
+          "session_type": "easy run",
+          "duration_min": 60,
+          "distance_km": 6,
+          "notes": "Start with a comfortable pace to build endurance. Focus on maintaining a steady effort."
+        },
+        {
+          "date": "2025-08-24",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day to recover from the first run."
+        },
+        {
+          "date": "2025-08-30",
+          "session_type": "easy run",
+          "duration_min": 60,
+          "distance_km": 6,
+          "notes": "Maintain a relaxed pace, gradually increasing weekly volume."
+        },
+        {
+          "date": "2025-08-31",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day for recovery."
+        }
+      ]
+    },
+    {
+      "week_number": 2,
+      "sessions": [
+        {
+          "date": "2025-09-06",
+          "session_type": "easy run",
+          "duration_min": 65,
+          "distance_km": 6.5,
+          "notes": "Focus on steady pace and good form."
+        },
+        {
+          "date": "2025-09-07",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        },
+        {
+          "date": "2025-09-13",
+          "session_type": "easy run",
+          "duration_min": 65,
+          "distance_km": 6.5,
+          "notes": "Maintain relaxed pace, prepare for longer runs."
+        },
+        {
+          "date": "2025-09-14",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        }
+      ]
+    },
+    {
+      "week_number": 3,
+      "sessions": [
+        {
+          "date": "2025-09-20",
+          "session_type": "easy run",
+          "duration_min": 70,
+          "distance_km": 7,
+          "notes": "Gradually increase volume, stay comfortable."
+        },
+        {
+          "date": "2025-09-21",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        },
+        {
+          "date": "2025-09-27",
+          "session_type": "easy run",
+          "duration_min": 70,
+          "distance_km": 7,
+          "notes": "Focus on smooth running and consistent pace."
+        },
+        {
+          "date": "2025-09-28",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        }
+      ]
+    },
+    {
+      "week_number": 4,
+      "sessions": [
+        {
+          "date": "2025-10-04",
+          "session_type": "easy run",
+          "duration_min": 75,
+          "distance_km": 7.5,
+          "notes": "Build endurance with slightly longer runs."
+        },
+        {
+          "date": "2025-10-05",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        },
+        {
+          "date": "2025-10-11",
+          "session_type": "easy run",
+          "duration_min": 75,
+          "distance_km": 7.5,
+          "notes": "Maintain steady pace, focus on breathing."
+        },
+        {
+          "date": "2025-10-12",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        }
+      ]
+    },
+    {
+      "week_number": 5,
+      "sessions": [
+        {
+          "date": "2025-10-18",
+          "session_type": "easy run",
+          "duration_min": 80,
+          "distance_km": 8,
+          "notes": "Prepare for longer runs, stay relaxed."
+        },
+        {
+          "date": "2025-10-19",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        },
+        {
+          "date": "2025-10-25",
+          "session_type": "easy run",
+          "duration_min": 80,
+          "distance_km": 8,
+          "notes": "Focus on maintaining a comfortable pace."
+        },
+        {
+          "date": "2025-10-26",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        }
+      ]
+    },
+    {
+      "week_number": 6,
+      "sessions": [
+        {
+          "date": "2025-11-01",
+          "session_type": "easy run",
+          "duration_min": 85,
+          "distance_km": 8.5,
+          "notes": "Begin tapering, reduce volume slightly."
+        },
+        {
+          "date": "2025-11-02",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Rest day."
+        },
+        {
+          "date": "2025-11-08",
+          "session_type": "easy run",
+          "duration_min": 45,
+          "distance_km": 4.5,
+          "notes": "Light run to stay active, avoid fatigue."
+        },
+        {
+          "date": "2025-11-09",
+          "session_type": "rest",
+          "duration_min": 0,
+          "distance_km": 0,
+          "notes": "Race day – perform warm-up and prepare mentally."
+        }
+      ]
+    }
+  ]
+}
