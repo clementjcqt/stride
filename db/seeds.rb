@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+p "starting seeding..."
+unless User.find_by(email: "toto@toto.fr")
+  User.create(email: "toto@toto.fr", password: "123456")
+end
+
+p "user created: #{User.last.email}"
+
+p 'finished seeding'
