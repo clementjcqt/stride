@@ -1,4 +1,16 @@
 <h1>Events around me</h1>
 <% @events.each do |event| %>
-  <li><%= event %></li>
+  <div class="card" style="width: 18rem;">
+    <img src="../assets/images/pexels-runffwpu-1571939.jpg" class="card-img-top" alt="Photo d'une course">
+    <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <p class="card-text"><%= event.description %></p>
+      <p class="card-text"><%= event.location %></p>
+      <p class="card-text"><%= event.event_type %></p>
+      <p class="card-text"><%= event.distance_km %></p>
+      <p class="card-text"><%= event.difficulty %></p>
+      <p class="card-text"><%= event.denivele %></p>
+      <%= link_to "See event", event_path %>
+    </div>
+  </div>
 <% end %>
