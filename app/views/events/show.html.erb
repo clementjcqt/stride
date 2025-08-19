@@ -1,8 +1,12 @@
 <div class="card mb-3 container justify-items-center">
-  <%= image_tag("course.jpg") %>
-  <div class="card-body">
+  <%= image_tag("course.jpg", class:"rounded-4 py-4") %>
+  <div class="card-body rounded-3">
     <h5 class="card-title"><%= @event.title %></h5>
     <p class="card-text"><%= @event.description %></p>
     <p class="card-text"><small class="text-body-secondary"><%= @event.date %></small></p>
+    <div class="d-flex justify-content-between">
+      <%= link_to "Back to events", events_path, class:"btn btn-outline-secondary" %>
+      <a href="#">Link to generate training plan</a>
+    </div>
   </div>
 </div>
