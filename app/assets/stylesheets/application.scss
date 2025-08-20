@@ -1,12 +1,38 @@
-// Graphical variables
+// ----------------------
+// Variables globales
+// ----------------------
+$primary-color: #4f46e5;
+$accent-color: #facc15;
+$background-color: #f9fafb;
+$text-color: #111827;
+
+// ----------------------
+// Config graphiques / bibliothèques
+// ----------------------
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
 
-// External libraries
+// ----------------------
+// Composants
+// ----------------------
+@import "components/events";
+
+// ----------------------
+// Librairies externes
+// ----------------------
 @import "bootstrap";
 @import "font-awesome";
 
-// Your CSS partials
-@import "components/index";
-@import "pages/index";
+// ----------------------
+// Styles généraux
+// ----------------------
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+}
