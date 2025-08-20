@@ -6,7 +6,7 @@
     <p class="card-text"><small class="text-body-secondary"><%= @event.date %></small></p>
     <div class="d-flex justify-content-between">
       <%= link_to "Back to events", events_path, class:"btn btn-outline-secondary" %>
-      <a href="#">Link to generate training plan</a>
+      <%= link_to "Set your goal", new_event_goal_path(@event), class:"btn btn-outline secondary"  %>
     </div>
   </div>
 </div>
