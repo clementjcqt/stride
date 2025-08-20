@@ -1,29 +1,10 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+require "ruby_llm"
+require "dotenv/load"
 
-p "starting seeding..."
-unless User.find_by(email: "toto@toto.fr")
-  User.create(email: "toto@toto.fr", password: "123456")
+RubyLLM.configure do |config|
+  config.openai_api_key = ENV["GITHUB_TOKEN"]
+  config.openai_api_base = "https://models.inference.ai.azure.com"
 end
-
-p "user created: #{User.last.email}"
-
-p 'finished seeding'
-
-# require "ruby_llm"
-# require "dotenv/load"
-
-# RubyLLM.configure do |config|
-#   config.openai_api_key = ENV["GITHUB_TOKEN"]
-#   config.openai_api_base = "https://models.inference.ai.azure.com"
-# end
 
 prompt = <<-PROMPT
 You are a professional running coach. Generate a structured **training program** in JSON format.
@@ -75,24 +56,4 @@ The output must be **valid JSON** as an **array of sessions**, each ready to be 
 Keep the JSON clean, concise, and ready to parse for saving each session into the `sessions` table.
 PROMPT
 response = RubyLLM.chat.ask(prompt)
-# puts response.content
-
-# file = File.read("db/response.json")
-
-program = Program.create!
-JSON.parse(response.content)["program"].each do |week|
-  puts "week number, #{week["week_number"]}"
-  week["sessions"].each do |week_sessions|
-    puts "week sessions, #{week_sessions}"
-    session = Session.new(
-      date: week_sessions["date"],
-      session_type: week_sessions["session_type"],
-      duration_min: week_sessions["duration_min"],
-      distance_km: week_sessions["distance_km"],
-      notes: week_sessions["notes"],
-      week_number: week["week_number"]
-    )
-    session.program = program
-    session.save
-  end
-end
+puts response.content
