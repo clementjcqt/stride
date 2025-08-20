@@ -1,0 +1,12 @@
+<h1>It works</h1>
+<%= simple_form_for [@event, @goal], html: { class: "mt-4" } do |f| %>
+  <%= f.input :,
+    label: "",
+    label_html: { class: "form-label fw-semibold" },
+    input_html: { class: "form-control" },
+    wrapper_html: { class: "mb-3" } %>
+  <%= f.hint '', class: 'form-text text-muted' %>
+  <%= f.error :, id: '_error', class: 'text-danger small' %>
+  <%= f.full_error :, class: 'text-danger fw-bold' %>
+  <%= f.button :submit, '', class: 'btn btn-primary mt-3' %>
+<% end %>
