@@ -1,4 +1,18 @@
-<h1>Events around me</h1>
-<% @events.each do |event| %>
-  <li><%= event %></li>
-<% end %>
+<h1 class="text-center mt-4">Events around me</h1>
+<div class="container d-flex my-4 flex-wrap gap-4">
+  <% @events.each do |event| %>
+    <div class="card rounded-3 overflow-hidden" style="width:18rem">
+      <%= image_tag("course.jpg")  %>
+      <div class="card-body">
+        <h5 class="card-title"><%= event.title %></h5>
+        <p class="card-text"><%= event.description %></p>
+        <p class="card-text"><%= event.location %></p>
+        <p class="card-text"><%= event.event_type %></p>
+        <p class="card-text">Distance: <%= event.distance_km %></p>
+        <p class="card-text"><%= event.difficulty %></p>
+        <p class="card-text">Elevation: <%= event.denivele %></p>
+        <%= link_to "See event", event_path(event), class:"btn btn-outline-primary rounded-2" %>
+      </div>
+    </div>
+  <% end %>
+</div>
