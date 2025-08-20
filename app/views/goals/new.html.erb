@@ -1,12 +1,22 @@
-<h1>It works</h1>
-<%= simple_form_for [@event, @goal], html: { class: "mt-4" } do |f| %>
-  <%= f.input :,
-    label: "",
-    label_html: { class: "form-label fw-semibold" },
+<%= simple_form_for [@event, @goal], html: { class: "mt-4 container col-6" } do |f| %>
+  <h1 class="text-center mb-4">Set your goal</h1>
+  <%= f.input :start_date, :as => :date,
+    label: "When can you start your training program ?",
     input_html: { class: "form-control" },
-    wrapper_html: { class: "mb-3" } %>
-  <%= f.hint '', class: 'form-text text-muted' %>
-  <%= f.error :, id: '_error', class: 'text-danger small' %>
-  <%= f.full_error :, class: 'text-danger fw-bold' %>
-  <%= f.button :submit, '', class: 'btn btn-primary mt-3' %>
+    wrapper_html: { class: "mb-3" }%>
+  <p>What is your goal ?</p>
+  <span>Goal time in minutes</span>
+  <div class="goal-time d-flex justify-content-start gap-5">
+    <%= f.number_field :goal_time,
+    input_html: { class: "form-control" },
+    value: @goal.goal_time,
+    wrapper_html: { class: "mb-3" }
+  %>
+  </div>
+  <%= f.input :max_time_per_day,
+    label: "How many hours a day can you train ?",
+    input_html: { class: "form-control" },
+    wrapper_html: { class: "mb-3" }
+  %>
+  <%= f.button :submit, "I'm done!", class: 'btn btn-primary mt-3' %>
 <% end %>

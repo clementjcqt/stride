@@ -1,4 +1,4 @@
 class Program < ApplicationRecord
-  has_many :goals
+  belongs_to :goal
   has_many :sessions
 end
