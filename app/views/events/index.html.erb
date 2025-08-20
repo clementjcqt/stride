@@ -18,7 +18,6 @@
             <div class="event-card__back">
               <h4><%= event[:title] %></h4>
               <p>Ville : <%= event[:city] %></p>
-              <p>Dans <%= (Date.parse(event[:date]) - Date.today).to_i %> jours</p>
               <p>Distance : <%= event[:distance_km] %> km</p>
               <p>Dénivelé : <%= event[:elevation_gain_m] %> m</p>
               <br>
