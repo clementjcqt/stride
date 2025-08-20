@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_08_18_154402) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_18_154404) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,19 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154402) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sessions", force: :cascade do |t|
+    t.string "session_type"
+    t.bigint "program_id", null: false
+    t.integer "duration_min"
+    t.integer "distance_km"
+    t.integer "week_number"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date"
+    t.index ["program_id"], name: "index_sessions_on_program_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -76,4 +89,5 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154402) do
   add_foreign_key "goals", "events"
   add_foreign_key "goals", "programs"
   add_foreign_key "goals", "users"
+  add_foreign_key "sessions", "programs"
 end
