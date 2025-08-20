@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_08_18_154404) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_18_154412) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,18 +30,12 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154404) do
   create_table "goals", force: :cascade do |t|
     t.bigint "event_id", null: false
     t.bigint "user_id", null: false
-    t.bigint "program_id", null: false
-    t.boolean "registered"
-    t.time "goal_time"
-    t.integer "max_weekly_distance_km"
-    t.string "training_type_preference"
-    t.time "run_time_begins"
-    t.time "run_time_ending"
-    t.integer "prep_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "start_date"
+    t.integer "goal_time"
+    t.integer "max_time_per_day"
     t.index ["event_id"], name: "index_goals_on_event_id"
-    t.index ["program_id"], name: "index_goals_on_program_id"
     t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
@@ -49,6 +43,8 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154404) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "goal_id"
+    t.index ["goal_id"], name: "index_programs_on_goal_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -87,7 +83,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154404) do
   end
 
   add_foreign_key "goals", "events"
-  add_foreign_key "goals", "programs"
   add_foreign_key "goals", "users"
   add_foreign_key "sessions", "programs"
 end

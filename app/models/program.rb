@@ -1,4 +1,6 @@
 class Program < ApplicationRecord
-  has_many :sessions, dependent: :destroy
+
+  belongs_to :goal
+
   has_many :sessions
 end

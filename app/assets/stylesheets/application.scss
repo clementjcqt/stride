@@ -24,6 +24,7 @@ $text-color: #111827;
 @import "bootstrap";
 @import "font-awesome";
 
+
 // ----------------------
 // Styles généraux
 // ----------------------
@@ -36,3 +37,10 @@ body {
 a {
   text-decoration: none;
 }
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import "pages/connexion";
+
