@@ -15,6 +15,16 @@ unless User.find_by(email: "toto@toto.fr")
   User.create(email: "toto@toto.fr", password: "123456")
 end
 
+User.create(
+  level:'beginner',
+  age: 23,
+  gender: 'female',
+  height: 187,
+  weight: 67,
+  availability: ['vendredi', 'samedi'],
+  conditions: nil
+)
+
 10.times do
   event = Event.create(
     title: Faker::Lorem.sentence(word_count: 3),

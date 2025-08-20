@@ -85,5 +85,6 @@ PROMPT
         )
       end
     end
-    redirect_to @program
+    redirect_to program_path(@program)
+  end
 end
