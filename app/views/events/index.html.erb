@@ -17,10 +17,10 @@
             <!-- Back -->
             <div class="event-card__back">
               <h4><%= event[:title] %></h4>
-              <p>Ville : <%= event[:city] %></p>
+              <p>Ville : <%= event[:location] %></p>
               <p>Dans <%= (event[:date] - Date.today).to_i %> jours</p>
               <p>Distance : <%= event[:distance_km] %> km</p>
-              <p>Dénivelé : <%= event[:elevation_gain_m] %> m</p>
+              <p>Dénivelé : <%= event[:denivele] %> m</p>
               <br>
               <button class="event-card__button_tier"><a href="<%= event[:source_url] %>" class="event-card__button_tier" target="_blank">Voir l'événement </a></button>
                <%= link_to "Créer un goal", "/events/#{event[:id]}/goals/new", class: "event-card__button_second" %>

@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-require 'faker'
+
 
 p "starting seeding..."
 unless User.find_by(email: "toto@toto.fr")
@@ -594,4 +594,3 @@ p 'finished seeding'
 #   config.openai_api_key = ENV["GITHUB_TOKEN"]
 #   config.openai_api_base = "https://models.inference.ai.azure.com"
 # end
-
