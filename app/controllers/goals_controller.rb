@@ -9,7 +9,6 @@ class GoalsController < ApplicationController
     @event = Event.find(@goal.event_id)
     @goal_hours = (@goal.goal_time / 60)
     @goal_minutes = @goal.goal_time % 60
-
   end
 
   def create

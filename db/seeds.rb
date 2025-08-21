@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
+Event.destroy_all
 
 p "starting seeding..."
 unless User.find_by(email: "toto@toto.fr")
