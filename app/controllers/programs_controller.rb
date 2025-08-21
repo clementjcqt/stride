@@ -76,20 +76,20 @@ Keep the JSON clean, concise, and ready to parse for saving each session into th
 PROMPT
     response = RubyLLM.chat.ask(prompt)
     clean_response = clean_json_response(response.content.to_s)
-    sessions_data = JSON.parse(clean_response)
-    sessions_data.each do |week|
-      week["sessions"].each do |s|
-        @program.sessions.create!(
-          week_number: s["week_number"],
-          date: s["date"],
-          session_type: s["session_type"],
-          duration_min: s["duration_min"],
-          distance_km: s["distance_km"],
-          notes: s["notes"]
-        )
-      end
-    end
-    redirect_to program_path(@program)
+    # sessions_data = JSON.parse(clean_response)
+    # sessions_data.each do |week|
+    #   week["sessions"].each do |s|
+    #     @program.sessions.create!(
+    #       week_number: s["week_number"].to_i,
+    #       date: s["date"],
+    #       session_type: s["session_type"],
+    #       duration_min: s["duration_min"],
+    #       distance_km: s["distance_km"],
+    #       notes: s["notes"]
+    #     )
+    #   end
+    # end
+    redirect_to goal_program_path(@program.goal, @program)
   end
 
   def clean_json_response(content)
