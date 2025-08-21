@@ -1,5 +1,13 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
-import "@popperjs/core"
-import "bootstrap"
+import { Application } from "@hotwired/stimulus"
+import { FlipController } from "./controllers/flip_controller"
+
+const application = Application.start()
+application.register("flip", FlipController)
+
+// Optional: debug
+application.debug = true
+window.Stimulus = application
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Stride JS prêt")
+})

@@ -1,0 +1,13 @@
+<div class="card text-center">
+  <div class="card-header">
+    <%= @event.title %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Your goal: </h5>
+    <p class="card-text"><%= @goal_hours %> hours, <%= @goal_minutes %> minutes</p>
+    <%= link_to "Create a personnalised program", new_goal_program_path(@goal), class:"btn btn-primary"  %>
+  </div>
+  <div class="card-footer text-body-secondary">
+    <p>You will start your training on: <%= @goal.start_date %></p>
+  </div>
+</div>
