@@ -10,16 +10,17 @@ class ProgramsController < ApplicationController
   end
 
   def new
+    @goal = Goal.find(params[:goal_id])
     @program = Program.new
   end
 
   def create
     # 1. Crée le programme
-    @program = Program.create!
-    # 2. Récupère le goal et l'event pour le user courant
     goal = Goal.find(params[:goal_id])
     event = goal.event
-    user = goal.user
+    # user = goal.user
+    @program = Program.create!(goal: goal)
+    # 2. Récupère le goal et l'event pour le user courant
     # 3. Prompt LLM
     prompt = <<-PROMPT
 You are a professional running coach. Generate a structured **training program** in JSON format.
@@ -29,13 +30,15 @@ You are a professional running coach. Generate a structured **training program**
 - Gender: #{current_user.gender}
 - Height: #{current_user.height} cm
 - Weight: #{current_user.weight} kg
-- Availability: #{current_user.availability.join(", ")}
-- Medical conditions/injuries: #{current_user.conditions.join(", ")}
+
+- Availability: #{current_user.availability&.join(", ")}
+- Medical conditions/injuries: #{current_user.conditions&.join(", ")}
+
 ## Event
 - Name: #{event.title}
 - Date: #{event.date}
-- Type: #{event.type}
-- Distance: #{event.distance} km
+- Type: #{event.event_type}
+- Distance: #{event.distance_km} km
 - Elevation gain: #{event.denivele} m
 ## Goal
 - Target time: #{goal.goal_time} minutes
@@ -72,19 +75,36 @@ The output must be **valid JSON** as an **array of sessions**, each ready to be 
 Keep the JSON clean, concise, and ready to parse for saving each session into the `sessions` table.
 PROMPT
     response = RubyLLM.chat.ask(prompt)
-    sessions_data = JSON.parse(response.content)
-    sessions_data.each do |week|
-      week["sessions"].each do |s|
-        @program.sessions.create!(
-          week_number: s["week_number"],
-          date: s["date"],
-          session_type: s["session_type"],
-          duration_min: s["duration_min"],
-          distance_km: s["distance_km"],
-          notes: s["notes"]
-        )
-      end
-    end
-    redirect_to program_path(@program)
+    clean_response = clean_json_response(response.content.to_s)
+    # sessions_data = JSON.parse(clean_response)
+    # sessions_data.each do |week|
+    #   week["sessions"].each do |s|
+    #     @program.sessions.create!(
+    #       week_number: s["week_number"].to_i,
+    #       date: s["date"],
+    #       session_type: s["session_type"],
+    #       duration_min: s["duration_min"],
+    #       distance_km: s["distance_km"],
+    #       notes: s["notes"]
+    #     )
+    #   end
+    # end
+    redirect_to goal_program_path(@program.goal, @program)
+  end
+
+  def clean_json_response(content)
+    # Remove markdown code blocks if present
+    cleaned = content.strip
+
+    # Remove ```json at the beginning
+    cleaned = cleaned.gsub(/\A```json\s*/, '')
+
+    # Remove ``` at the end
+    cleaned = cleaned.gsub(/\s*```\z/, '')
+
+    # Remove any remaining backticks
+    cleaned = cleaned.gsub(/```/, '')
+
+    cleaned.strip
   end
 end

@@ -12,4 +12,3 @@ export default class extends Controller {
     this.inner.classList.toggle("is-flipped")
   }
 }
-git 

@@ -3,8 +3,13 @@ class GoalsController < ApplicationController
     @goal = Goal.new
     @event = Event.find(params[:event_id])
   end
+
   def show
     @goal = Goal.find(params[:id])
+    @event = Event.find(@goal.event_id)
+    @goal_hours = (@goal.goal_time / 60)
+    @goal_minutes = @goal.goal_time % 60
+
   end
 
   def create
