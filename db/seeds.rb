@@ -99,7 +99,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 100,
   difficulty: "Advanced",
-  photo_url: "https://www.schneiderelectricparismarathon.com/fr/l-evenement/videos-photos#tab-photos",
+  photo_url: "https://mybestruns.com/racephoto/1265.jpg",
   source_url: "https://www.schneiderelectricparismarathon.com/fr/"
 )
 
@@ -216,7 +216,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 30,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1473950575850-d0b8f1dc2f37",
+  photo_url: "https://wirhelfenkindern.rtl.de/fileadmin/_processed_/6/5/csm_2024-berlin-marathon-ankuendigung_a0ae66afc3.jpg",
   source_url: "https://www.bz-berlin.de/berlin-2011/berliner-innenstadt/berlin-wahl-2025-und-bmw-berlin-marathon-kollision"
 )
 
@@ -345,7 +345,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 80,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1566417713940-fa6de1e8f9c5",
+  photo_url: "https://copenhagenmarathon.dk/wp-content/uploads/2023/05/52897737575_a3ac6b144e_k-2.jpg",
   source_url: "https://results.copenhagenmarathon.dk/2025/?pid=event"
 )
 
@@ -397,7 +397,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 60,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1526521108-5b0c2c4c9c0b",
+  photo_url: "https://goldcoastmarathon.com.au/wp-content/uploads/2013/12/2018-10km-1170-x-780.jpg",
   source_url: "https://www.couriermail.com.au/sport/run/2025-gold-coast-marathon-course-changes-revealed/news-story/2d2b6b7b7c8bb"
 )
 
@@ -410,7 +410,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 80,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1533681018184-68bd1d883546",
+  photo_url: "https://haspa-marathon-hamburg.de/wp-content/uploads/2022/05/HEA02982.jpg",
   source_url: "https://www.welt.de/256007154"
 )
 
@@ -449,7 +449,7 @@ Event.create(
   distance_km: 19.0, # approximation *actual is longer than 21 but route specifics*
   denivele: 400,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://files-cdn.registration4all.com/public/event/eventmanager/180742/pictures-eventdetail-theme/EventDetail_145854_180742_marvejols2_169.jpg",
   source_url: "https://fr.wikipedia.org/wiki/Semi-marathon_Marvejols-Mende"
 )
 
@@ -462,7 +462,7 @@ Event.create(
   distance_km: 21.0975,
   denivele: 50,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://nogibogi.com/wp-content/uploads/2014/11/7-e1415917125297-1-635x423.jpg",
   source_url: "https://fr.wikipedia.org/wiki/Semi-marathon_de_Nice"
 )
 
@@ -527,7 +527,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 300,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://images.ladepeche.fr/api/v1/images/view/63098c4ea6987026be67a784/large/image.jpg?v=1",
   source_url: "https://www.ahotu.com/calendar/running/marathon/france"
 )
 
