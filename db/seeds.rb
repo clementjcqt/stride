@@ -26,33 +26,33 @@ User.create(
 )
 
 Event.create(
-  title: "Tokyo Marathon 2025",
+  title: "Tokyo Marathon",
   location: "Tokyo",
   country: "Japan",
-  date: "2025-03-02",
+  date: "2026-03-01",
   event_type: "Road Marathon",
   distance_km: 42.195,
-  denivele: 100,
+  denivele: 0,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc",
-  source_url: "https://www.marathon.tokyo/en/news/detail/news_003048.html"
+  photo_url: "https://bit.ly/tokyo-marathon-photo",
+  source_url: "https://tokyo42195.org/en/news/en_250623_01.html"
 )
 
 Event.create(
-  title: "Boston Marathon 2025",
-  location: "Boston, MA",
-  country: "USA",
-  date: "2025-04-21",
-  event_type: "Road Marathon",
-  distance_km: 42.195,
-  denivele: 250,
-  difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
-  source_url: "https://www.baa.org/races/boston-marathon"
+  title: "Athens Half Marathon",
+  location: "Athènes",
+  country: "Greece",
+  date: "2026-03-09",
+  event_type: "Semi-Marathon",
+  distance_km: 21.0975,
+  denivele: 0,
+  difficulty: "Intermediate",
+  photo_url: "https://bit.ly/athens-half-photo",
+  source_url: "https://en.wikipedia.org/wiki/Semi-Marathon_d'Athènes"
 )
 
 Event.create(
-  title: "TCS London Marathon 2025",
+  title: "TCS",
   location: "London",
   country: "United Kingdom",
   date: "2025-04-27",
@@ -65,33 +65,98 @@ Event.create(
 )
 
 Event.create(
-  title: "Schneider Electric Marathon de Paris 2025",
+  title: "Marathon de Paris",
   location: "Paris",
   country: "France",
-  date: "2025-04-13",
+  date: "2026-04-12",
+  event_type: "Road Marathon",
+  distance_km: 42.195,
+  denivele: 50,
+  difficulty: "Advanced",
+  photo_url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc",
+  source_url: "https://www.parismarathon.com"
+)
+
+Event.create(
+  title: "Marathon International du Beaujolais",
+  location: "Villefranche-sur-Saône",
+  country: "France",
+  date: "2026-11-21",
+  event_type: "Road Marathon",
+  distance_km: 42.195,
+  denivele: 200,
+  difficulty: "Intermediate",
+  photo_url: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c",
+  source_url: "https://www.marathondubeaujolais.org"
+)
+
+Event.create(
+  title: "Schneider Electric Marathon",
+  location: "Paris",
+  country: "France",
+  date: "2026-04-12",
+  event_type: "Road Marathon",
+  distance_km: 42.195,
+  denivele: 100,
+  difficulty: "Advanced",
+  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  source_url: "https://www.se.com/fr/fr/about-us/sustainability/foundation/events/marathon-de-paris.jsp"
+)
+
+Event.create(
+  title: "Harmonie Mutuelle Semi de Paris",
+  location: "Paris",
+  country: "France",
+  date: "2026-03-01",
+  event_type: "Half Marathon",
+  distance_km: 21.0975,
+  denivele: 50,
+  difficulty: "Intermediate",
+  photo_url: "https://images.unsplash.com/photo-1544918877-5d20674f03c0",
+  source_url: "https://ahotu.com/event/semi-marathon-de-paris"
+)
+
+Event.create(
+  title: "Marathon des Alpes-Maritimes",
+  location: "Nice–Cannes",
+  country: "France",
+  date: "2026-11-08",
   event_type: "Road Marathon",
   distance_km: 42.195,
   denivele: 120,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
-  source_url: "https://www.backonmyfeet.org/event/2025-schneider-electric-paris-marathon/"
+  photo_url: "https://images.unsplash.com/photo-1504893524553-b8553f3e2f78",
+  source_url: "https://pro.timeto.com/fr-FR/company/team/events/marathon-des-alpes-maritimes-nice-cannes"
 )
 
 Event.create(
-  title: "Harmonie Mutuelle Semi de Paris 2025",
-  location: "Paris",
+  title: "Marathon du Golfe",
+  location: "Golfe de Saint-Tropez",
   country: "France",
-  date: "2025-03-02",
-  event_type: "Road Half Marathon",
-  distance_km: 21.0975,
-  denivele: 80,
-  difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c",
-  source_url: "https://www.baa.org/races/boston-marathon"
+  date: "2026-03-29",
+  event_type: "Road Marathon",
+  distance_km: 42.195,
+  denivele: 250,
+  difficulty: "Advanced",
+  photo_url: "https://images.unsplash.com/photo-1520975661595-64590a75d6b7",
+  source_url: "https://www.facebook.com/marathondugolfedesainttropez/"
 )
 
 Event.create(
-  title: "Zurich Maratón de Sevilla 2025",
+  title: "Marathon de la Liberté",
+  location: "Caen",
+  country: "France",
+  date: "2026-06-07",
+  event_type: "Road Marathon",
+  distance_km: 42.195,
+  denivele: 80,
+  difficulty: "Advanced",
+  photo_url: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211",
+  source_url: "https://www.marathondelaliberte.fr/en/"
+)
+
+Event.create(
+  title: "Zurich Maratón de Sevilla",
   location: "Seville",
   country: "Spain",
   date: "2025-02-23",
@@ -104,7 +169,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Zurich Rock 'n' Roll Madrid Marathon 2025",
+  title: "Zurich Rock 'n' Roll",
   location: "Madrid",
   country: "Spain",
   date: "2025-04-27",
@@ -117,7 +182,7 @@ Event.create(
 )
 
 Event.create(
-  title: "NN Marathon Rotterdam 2025",
+  title: "NN",
   location: "Rotterdam",
   country: "Netherlands",
   date: "2025-04-13",
@@ -130,7 +195,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Run Rome The Marathon 2025",
+  title: "Run Rome The Marathon",
   location: "Rome",
   country: "Italy",
   date: "2025-03-16",
@@ -143,7 +208,7 @@ Event.create(
 )
 
 Event.create(
-  title: "BMW Berlin Marathon 2025",
+  title: "BMW",
   location: "Berlin",
   country: "Germany",
   date: "2025-09-28",
@@ -156,7 +221,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Bank of America Chicago Marathon 2025",
+  title: "Bank of America Chicago Marathon",
   location: "Chicago, IL",
   country: "USA",
   date: "2025-10-12",
@@ -169,7 +234,7 @@ Event.create(
 )
 
 Event.create(
-  title: "AJ Bell Great North Run 2025",
+  title: "AJ Bell Great North Run",
   location: "Newcastle",
   country: "United Kingdom",
   date: "2025-09-07",
@@ -182,7 +247,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Sydney Marathon 2025",
+  title: "Sydney Marathon",
   location: "Sydney",
   country: "Australia",
   date: "2025-09-14",
@@ -195,7 +260,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Sanlam Cape Town Marathon 2025",
+  title: "Sanlam",
   location: "Cape Town",
   country: "South Africa",
   date: "2025-10-19",
@@ -208,7 +273,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Standard Chartered Singapore Marathon 2025",
+  title: "Standard Chartered",
   location: "Singapore",
   country: "Singapore",
   date: "2025-12-06",
@@ -221,7 +286,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Honolulu Marathon 2025",
+  title: "Honolulu Marathon",
   location: "Honolulu, HI",
   country: "USA",
   date: "2025-12-14",
@@ -234,7 +299,21 @@ Event.create(
 )
 
 Event.create(
-  title: "Valencia Marathon Trinidad Alfonso 2025",
+  title: "Boston Marathon",
+  location: "Boston, Massachusetts",
+  country: "USA",
+  date: "2026-04-20",
+  event_type: "Road Marathon",
+  distance_km: 42.195,
+  denivele: 0,
+  difficulty: "Advanced",
+  photo_url: "https://bit.ly/boston-marathon-photo",
+  source_url: "https://www.baa.org/races/boston-marathon"
+)
+
+
+Event.create(
+  title: "Trinidad Alfonso",
   location: "València",
   country: "Spain",
   date: "2025-12-07",
@@ -246,7 +325,7 @@ Event.create(
   source_url: "https://www.pa-marathonvalencia.com/en/news/"
 )
 Event.create(
-  title: "Tamarack Ottawa Marathon 2025",
+  title: "Tamarack",
   location: "Ottawa",
   country: "Canada",
   date: "2025-05-25",
@@ -259,7 +338,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Copenhagen Marathon 2025",
+  title: "Copenhagen Marathon",
   location: "Copenhagen",
   country: "Denmark",
   date: "2025-05-11",
@@ -272,7 +351,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Dubai Marathon 2025",
+  title: "Dubai Marathon",
   location: "Dubai",
   country: "United Arab Emirates",
   date: "2025-01-12",
@@ -285,7 +364,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Tata Mumbai Marathon 2025",
+  title: "Tata",
   location: "Mumbai",
   country: "India",
   date: "2025-01-19",
@@ -298,7 +377,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Gold Coast Marathon 2025 (Weekend)",
+  title: "Gold Coast Marathon",
   location: "Gold Coast",
   country: "Australia",
   date: "2025-07-05",
@@ -311,7 +390,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Haspa Marathon Hamburg 2025",
+  title: "Haspa",
   location: "Hamburg",
   country: "Germany",
   date: "2025-04-27",
@@ -324,7 +403,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Sanlam Cape Town 10K 2025",
+  title: "Sanlam",
   location: "Cape Town",
   country: "South Africa",
   date: "2025-10-18",
@@ -402,7 +481,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Semi-marathon du Chemin du Train Saugeais",
+  title: "Chemin du Train Saugeais",
   location: "Gilley",
   country: "France",
   date: "2025-08-24",
@@ -493,7 +572,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Marathon international In Deauville",
+  title: "Marathon international",
   location: "Deauville",
   country: "France",
   date: "2025-11-15",
@@ -594,4 +673,3 @@ p 'finished seeding'
 #   config.openai_api_key = ENV["GITHUB_TOKEN"]
 #   config.openai_api_base = "https://models.inference.ai.azure.com"
 # end
-
