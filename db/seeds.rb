@@ -540,7 +540,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 60,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://cdn-s-www.republicain-lorrain.fr/images/97C77DA9-6177-4B2A-9027-233544F08F2A/NW_raw/au-depart-lors-du-semi-marathon-du-val-de-fensch-a-uckange-en-2019-photo-rl-philippe-neu-1631814128.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -553,7 +553,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 50,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://cdn-s-www.republicain-lorrain.fr/images/7432A407-C8F5-4A75-878E-3B59110364A1/NW_raw/en-2019-la-yussoise-a-regroupe-pres-de-1800-participants-photo-archives-rl-1599808901.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -566,7 +566,7 @@ Event.create(
   distance_km: 21.0,
   denivele: 50,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://cdn-s-www.ledauphine.com/images/C824ACFC-31A7-4066-97C7-7924B27A27AB/NW_raw/malgre-une-meteo-un-brin-capricieuse-hier-matin-ils-ont-ete-nombreux-a-prendre-le-depart-de-la-quarantieme-edition-des-foulees-ruy-montoises-1459197546.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -579,7 +579,7 @@ Event.create(
   distance_km: 10.0,
   denivele: 20,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://images.ladepeche.fr/api/v1/images/view/612c4d498fe56f6819740406/large/image.jpg?v=1",
   source_url: "https://www.ahotu.com/calendar/running/france"
 )
 
@@ -594,4 +594,3 @@ p 'finished seeding'
 #   config.openai_api_key = ENV["GITHUB_TOKEN"]
 #   config.openai_api_base = "https://models.inference.ai.azure.com"
 # end
-
