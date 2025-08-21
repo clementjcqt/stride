@@ -35,7 +35,7 @@ Event.create(
   denivele: 0,
   difficulty: "Advanced",
   photo_url: "https://bit.ly/tokyo-marathon-photo",
-  source_url: "https://tokyo42195.org/en/news/en_250623_01.html"
+  source_url: "https://www.marathon.tokyo/en/"
 )
 
 Event.create(
@@ -99,8 +99,8 @@ Event.create(
   distance_km: 42.195,
   denivele: 100,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
-  source_url: "https://www.se.com/fr/fr/about-us/sustainability/foundation/events/marathon-de-paris.jsp"
+  photo_url: "https://www.schneiderelectricparismarathon.com/fr/l-evenement/videos-photos#tab-photos",
+  source_url: "https://www.schneiderelectricparismarathon.com/fr/"
 )
 
 Event.create(
@@ -112,13 +112,13 @@ Event.create(
   distance_km: 21.0975,
   denivele: 50,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1544918877-5d20674f03c0",
-  source_url: "https://ahotu.com/event/semi-marathon-de-paris"
+  photo_url: "https://travelboatinglifestyle.com/wp-content/uploads/2016/02/marathon-de-paris-20154-3.jpg",
+  source_url: "https://www.hoka.com/fr/fr/hoka-semi-de-paris.html?msockid=22d4bb2dc5bf6f4a287cad26c49e6e5b"
 )
 
 Event.create(
   title: "Marathon des Alpes-Maritimes",
-  location: "Nice–Cannes",
+  location: "Nice-Cannes",
   country: "France",
   date: "2026-11-08",
   event_type: "Road Marathon",
@@ -164,7 +164,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 60,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9",
+  photo_url: "https://triatletasenred.sport.es/wp-content/uploads/20240218-Zurich-Maraton-Sevilla_04.jpeg",
   source_url: "https://www.maratondesevilla.es/"
 )
 
@@ -177,7 +177,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 300,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1521550834646-8762f2fbaf44",
+  photo_url: "https://www.mundodeportivo.com/uploads/2020/08/10/60e74cfcd8ca5.jpeg",
   source_url: "https://runrocknroll.com/madrid/"
 )
 
@@ -190,7 +190,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 40,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1502567091907-2c9a3b3a0f82",
+  photo_url: "https://d2a3ux41sjxpco.cloudfront.net/carousel/file/project_photo/38807/opengraph_49d8d54f5105d4a35af2b7d1adc39771bd599495.jpg",
   source_url: "https://nnmarathonrotterdam.org/en/"
 )
 
@@ -203,7 +203,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 180,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1526481280698-8fcc13fd3b2e",
+  photo_url: "https://www.runromethemarathon.com/wp-content/uploads/2019/10/partenza-lontano.jpg",
   source_url: "https://runromethemarathon.com/en/"
 )
 
@@ -229,7 +229,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 50,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1484249170766-998fa6efe3c0",
+  photo_url: "https://assets.classy.org/7602753/c7fc71b6-ded5-11e9-a2e1-0eb25c9a476e.jpg",
   source_url: "https://raceroster.com/events/2025/85525/2025-bank-of-america-chicago-marathon"
 )
 
@@ -242,7 +242,7 @@ Event.create(
   distance_km: 21.0975,
   denivele: 120,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://cdn.greatrun.org/wp-content/uploads/2023/10/GNR_HEADER_2023_BRIDGE_HEADER_MEMBERS.jpg",
   source_url: "https://www.greatrun.org/events/great-north-run/"
 )
 
@@ -255,7 +255,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 200,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9",
+  photo_url: "https://tse3.mm.bing.net/th/id/OIP.-w5YV_I15xx_ek1g9TTn6QHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
   source_url: "https://www.sydneymarathon.com/2025-course-change"
 )
 
@@ -307,10 +307,9 @@ Event.create(
   distance_km: 42.195,
   denivele: 0,
   difficulty: "Advanced",
-  photo_url: "https://bit.ly/boston-marathon-photo",
+  photo_url: "https://runningmagazine.ca/wp-content/uploads/2025/04/Lokedi_Sharon-FH-Boston25p-1024x683.jpg",
   source_url: "https://www.baa.org/races/boston-marathon"
 )
-
 
 Event.create(
   title: "Trinidad Alfonso",
@@ -348,6 +347,19 @@ Event.create(
   difficulty: "Intermediate",
   photo_url: "https://images.unsplash.com/photo-1566417713940-fa6de1e8f9c5",
   source_url: "https://results.copenhagenmarathon.dk/2025/?pid=event"
+)
+
+Event.create(
+  title: "Moscow Marathon route",
+  location: "Moscow",
+  country: "Russia",
+  date: "2026-09-21",
+  event_type: "Road Marathon",
+  distance_km: 41.2,
+  denivele: 50,
+  difficulty: "Intermediate",
+  photo_url: "https://files.prokerala.com/news/photos/imgs/1024/runners-compete-during-the-moscow-half-marathon-1043655.jpg",
+  source_url: "https://moscowmarathon.runc.run/en/"
 )
 
 Event.create(
