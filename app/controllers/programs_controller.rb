@@ -42,7 +42,7 @@ You are a professional running coach. Generate a structured **training program**
 - Each week should contain a list of **sessions**.
 - Each session must include the following keys:
   - date (YYYY-MM-DD)
-  - session_type (string, e.g., "easy run", "intervals", "long run", "recovery run", "cross-training", "threshold", "tempo run", "hill repeat", ... etc)
+  - session_type (string, e.g., "easy run", "intervals", "long run", "tempo run")
   - duration_min (integer)
   - distance_km (float)
   - notes (string, max 2 sentences)
@@ -129,6 +129,7 @@ PROMPT
     @program.update!(content: response.content)
 
     redirect_to goal_program_path(@program.goal, @program), notice: "Programme créé avec succès !"
+
   end
 
   private
