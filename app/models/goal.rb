@@ -1,7 +1,7 @@
 class Goal < ApplicationRecord
   belongs_to :event
   belongs_to :user
-  has_many :programs
+  has_many :programs, dependent: :destroy
 
   # before_validation :calcul_goal_time
 
