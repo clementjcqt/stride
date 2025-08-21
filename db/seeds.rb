@@ -268,7 +268,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 150,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://ml9j0iwcwlbz.i.optimole.com/cb:wmLv.53200/w:2500/h:1250/q:mauto/f:best/https://capetownmarathon.com/wp-content/uploads/2023/03/webimages_1.png",
   source_url: "https://capetownmarathon.com/"
 )
 
@@ -553,7 +553,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 60,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+  photo_url: "https://medias.lecourriercauchois.fr/photos/1200/339031/",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -566,7 +566,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 40,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://i.ytimg.com/vi/hc1YnXyXT9Y/maxresdefault.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -579,7 +579,7 @@ Event.create(
   distance_km: 21.0,
   denivele: 50,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://maville.com/photosmvi/2023/09/15/P33252955D5939610G_crop_1080-600_.jpg",
   source_url: "https://www.ahotu.com/calendar/running/semi-marathon/france"
 )
 
@@ -592,7 +592,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 70,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+  photo_url: "https://fr.milesrepublic.com/_next/image?url=https:%2F%2F3f8upq3s4150jih8.public.blob.vercel-storage.com%2F3691%2F_LL_LLE29611-qmJSnZqZVQt1eB6bKwcuiSe0huhs5R-c59uS13rstgP9WxzWDo2Anq8qg3Sc3-9KTLmKrhHRKnik25lIFBYsHdtsAA5x-9uPEkzLHQnMzbXiShrGdaXlPRRz3sR-2gKwrN7COSudvMssUVstwsuRmzukWE.jpg&w=3840&q=75",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -605,7 +605,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 90,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://semi-marathon-armagnac.com/wp-content/uploads/2023/09/semi08.jpg",
   source_url: "https://jogging-plus.com/calendrier/courses-5-10-15-km/france/"
 )
 
@@ -618,7 +618,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 70,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2023/09/15/node_1373197/56659655/public/2023/09/15/B9735085828Z.1_20230915103711_000%2BGGONEQPN5.1-0.jpg?itok=z2VWRqLk1694767700",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -631,7 +631,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 60,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://cdn-s-www.republicain-lorrain.fr/images/97C77DA9-6177-4B2A-9027-233544F08F2A/NW_raw/au-depart-lors-du-semi-marathon-du-val-de-fensch-a-uckange-en-2019-photo-rl-philippe-neu-1631814128.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -644,7 +644,7 @@ Event.create(
   distance_km: 21.1,
   denivele: 50,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://cdn-s-www.republicain-lorrain.fr/images/7432A407-C8F5-4A75-878E-3B59110364A1/NW_raw/en-2019-la-yussoise-a-regroupe-pres-de-1800-participants-photo-archives-rl-1599808901.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -657,7 +657,7 @@ Event.create(
   distance_km: 21.0,
   denivele: 50,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1523805009345-7448845a9e53",
+  photo_url: "https://cdn-s-www.ledauphine.com/images/C824ACFC-31A7-4066-97C7-7924B27A27AB/NW_raw/malgre-une-meteo-un-brin-capricieuse-hier-matin-ils-ont-ete-nombreux-a-prendre-le-depart-de-la-quarantieme-edition-des-foulees-ruy-montoises-1459197546.jpg",
   source_url: "https://fr.milesrepublic.com/semi-marathon"
 )
 
@@ -670,7 +670,7 @@ Event.create(
   distance_km: 10.0,
   denivele: 20,
   difficulty: "Beginner",
-  photo_url: "https://images.unsplash.com/photo-1520975922284-5f519b6b1a5a",
+  photo_url: "https://images.ladepeche.fr/api/v1/images/view/612c4d498fe56f6819740406/large/image.jpg?v=1",
   source_url: "https://www.ahotu.com/calendar/running/france"
 )
 
