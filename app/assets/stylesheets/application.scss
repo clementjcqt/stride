@@ -17,6 +17,8 @@ $text-color: #111827;
 // Composants
 // ----------------------
 @import "components/events";
+@import "components/programs";
+@import "components/sessions";
 
 // ----------------------
 // Librairies externes
@@ -43,4 +45,3 @@ a {
 @import "pages/index";
 
 @import "pages/connexion";
-
