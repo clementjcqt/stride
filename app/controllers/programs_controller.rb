@@ -49,7 +49,7 @@ You are a professional running coach. Generate a structured **training program**
 - Each week should contain a list of **sessions**.
 - Each session must include the following keys:
   - date (YYYY-MM-DD)
-  - session_type (string, e.g., "easy run", "intervals", "long run", "recovery run", "cross-training", "threshold", "tempo run", "hill repeat", ... etc)
+  - session_type (string, e.g., "easy run", "intervals", "long run", "tempo run")
   - duration_min (integer)
   - distance_km (float)
   - notes (string, max 2 sentences)
@@ -75,7 +75,31 @@ The output must be **valid JSON** as an **array of sessions**, each ready to be 
 Keep the JSON clean, concise, and ready to parse for saving each session into the `sessions` table.
 PROMPT
     response = RubyLLM.chat.ask(prompt)
-    clean_response = clean_json_response(response.content.to_s)
+# puts response.content
+
+# file = File.read("db/response.json")
+
+    # program = Program.create!
+    @clean_response = clean_json_response(response.content.to_s)
+    JSON.parse(@clean_response)["program"].each do |week|
+      puts "week number, #{week["week_number"]}"
+      week["sessions"].each do |week_sessions|
+        puts "week sessions, #{week_sessions}"
+        @session = Session.new(
+          date: week_sessions["date"],
+          session_type: week_sessions["session_type"],
+          duration_min: week_sessions["duration_min"],
+          distance_km: week_sessions["distance_km"],
+          notes: week_sessions["notes"],
+          week_number: week["week_number"]
+        )
+        @session.program = @program
+        @session.save
+        @program.content = response.content
+      end
+    end
+    # response = RubyLLM.chat.ask(prompt)
+    # clean_response = clean_json_response(response.content.to_s)
     # sessions_data = JSON.parse(clean_response)
     # sessions_data.each do |week|
     #   week["sessions"].each do |s|
