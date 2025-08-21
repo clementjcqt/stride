@@ -34,8 +34,8 @@ Event.create(
   distance_km: 42.195,
   denivele: 0,
   difficulty: "Advanced",
-  photo_url: "https://bit.ly/tokyo-marathon-photo",
-  source_url: "https://www.marathon.tokyo/en/"
+  photo_url: "https://www.musculardystrophyuk.org/app/uploads/2025/04/Tokyo-Marathon-2026-Header-image-1-scaled.jpg",
+  source_url: "https://tokyo42195.org/en/news/en_250623_01.html"
 )
 
 Event.create(
@@ -47,7 +47,7 @@ Event.create(
   distance_km: 21.0975,
   denivele: 0,
   difficulty: "Intermediate",
-  photo_url: "https://bit.ly/athens-half-photo",
+  photo_url: "https://images.ahotu.com/yod7X2ELEkCMMBsTYwyUPyov?w=1920&q=75&f=webp",
   source_url: "https://en.wikipedia.org/wiki/Semi-Marathon_d'Athènes"
 )
 
@@ -60,7 +60,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 100,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+  photo_url: "https://tritravel.mymedia.delivery/1920x1194/p/o/wp-content/uploads/2017/08/278270272_10159482189744748_2667010543693952200_n.jpg",
   source_url: "https://www.tcslondonmarathon.com/the-event/tcs-london-marathon-2025"
 )
 
@@ -73,7 +73,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 50,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc",
+  photo_url: "https://www.zaprinta.fr/wp-content/uploads/2021/06/marathon-paris.jpg",
   source_url: "https://www.parismarathon.com"
 )
 
@@ -86,7 +86,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 200,
   difficulty: "Intermediate",
-  photo_url: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c",
+  photo_url: "https://www.marathondubeaujolais.org/wp-content/uploads/2023/02/MIB-PHOTORUNNING-00242.jpg",
   source_url: "https://www.marathondubeaujolais.org"
 )
 
@@ -125,7 +125,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 120,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1504893524553-b8553f3e2f78",
+  photo_url: "https://stadion-actu.fr/wp-content/uploads/2023/07/Marathon-des-Alpes-Maritimes-Nice-Cannes-2023-inscriptions.jpg",
   source_url: "https://pro.timeto.com/fr-FR/company/team/events/marathon-des-alpes-maritimes-nice-cannes"
 )
 
@@ -138,7 +138,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 250,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1520975661595-64590a75d6b7",
+  photo_url: "https://www.outdoorgo.com/wp-content/uploads/2018/02/St-Tropez.jpg",
   source_url: "https://www.facebook.com/marathondugolfedesainttropez/"
 )
 
@@ -151,7 +151,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 80,
   difficulty: "Advanced",
-  photo_url: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211",
+  photo_url: "https://www.marathondelaliberte.fr/wp-content/uploads/MARATHONDELALIBERTE_23-1.jpg",
   source_url: "https://www.marathondelaliberte.fr/en/"
 )
 
