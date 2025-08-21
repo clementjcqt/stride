@@ -10,6 +10,11 @@ Rails.application.routes.draw do
       resources :sessions, only: [:show]
     end
   end
+
+  resources :programs do
+    resources :sessions, only: [:show]
+  end
+
   # resources :programs, only: [:show, ] do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
