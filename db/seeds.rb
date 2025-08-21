@@ -595,7 +595,7 @@ p 'finished seeding'
 #   config.openai_api_base = "https://models.inference.ai.azure.com"
 # end
 
-prompt = <<-PROMPT
+=begin prompt = <<-PROMPT
 You are a professional running coach. Generate a structured **training program** in JSON format.
 ## Athlete Profile
 - Level: beginner
@@ -666,3 +666,4 @@ JSON.parse(response.content)["program"].each do |week|
     session.save
   end
 end
+ =end
