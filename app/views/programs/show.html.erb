@@ -1,1 +1,24 @@
-<h1>It works</h1>
+<h1>Programme pour <%= @program.goal.event.title %></h1>
+<p>Objectif : <%= @program.goal.goal_time %> min</p>
+
+<% @sessions.group_by { |s| s.date.strftime("%B %Y") }.each do |month_name, month_sessions| %>
+  <h2><%= month_name %></h2>
+  <div class="month">
+    <% month_sessions.group_by(&:week_number).each do |week_number, sessions| %>
+      <div class="week">
+        <h3>Semaine <%= week_number %></h3>
+        <ul>
+          <% sessions.each do |session| %>
+            <li>
+              <strong><%= session.session_type.titleize %></strong>
+              le <%= session.date.strftime("%d %b %Y") %> -
+              <%= session.duration_min %> min,
+              <%= session.distance_km %> km
+              <%= link_to "Voir détails", program_session_path(@program, session), class: "btn btn-sm btn-outline-primary" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+<% end %>

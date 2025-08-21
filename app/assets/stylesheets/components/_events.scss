@@ -1,17 +1,14 @@
 .event-card {
   perspective: 1000px;
   cursor: default;
-
   &__inner {
     position: relative;
     width: 100%;
-    height: 300px; /* assure la hauteur */
+    height: 300px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     border-radius: 12px;
-
   }
-
   &__front,
   &__back {
     position: absolute;
@@ -26,13 +23,11 @@
     backface-visibility: hidden;
     color: white;
   }
-
   &__front {
     background-size: cover;
     background-position: center;
     background-color: #333;
     z-index: 2;
-
     .event-card__badge {
       position: absolute;
       top: 10px;
@@ -42,33 +37,26 @@
       font-size: 0.8rem;
       font-weight: bold;
       color: white;
-
-      &.Beginner { background-color: #4caf50; }
-      &.Intermediate { background-color: #ff9800; }
-      &.Advanced { background-color: #f44336; }
+      &.Beginner { background-color: #4CAF50; }
+      &.Intermediate { background-color: #FF9800; }
+      &.Advanced { background-color: #F44336; }
     }
-
     h3 { text-align: center; margin-top: 50px; margin-bottom: 20px; }
     p { text-align: left; margin: 2px 0; }
-
     .event-card__button { margin-top: 10px; align-self: flex-start; }
   }
-
   &__back {
-    background-color: #222; /* sombre pour contraste */
+    background-color: #222;
     transform: rotateY(180deg);
     justify-content: flex-start;
     z-index: 1;
-
     h4 { text-align: center; margin-bottom: 15px; }
     p, a { text-align: left; margin: 2px 0; color: white; }
     .event-card__button { margin-top: 10px; align-self: flex-start; color: white; }
   }
-
   &__inner.is-flipped {
     transform: rotateY(180deg);
   }
-
   &__button,
   &__button_second,
   &__button_tier {
@@ -78,21 +66,16 @@
     cursor: pointer;
     &:hover { text-decoration: underline; }
   }
-
   &__button,
   &__button_second{
     font-weight: bold;
   }
-
   &__button{
     text-align: left;
   }
-
-
   &__button_second {
       text-align: right;
   }
-
   &__button_tier {
     text-align: center;
   }
