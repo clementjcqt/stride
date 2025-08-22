@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  max-height: 60px;
 
   .navbar-brand {
     font-weight: bold;
@@ -13,7 +14,7 @@
     align-items: center;
 
     .navbar-logo {
-      height: 40px;
+      max-height: 60px;
       margin-right: 10px;
     }
   }
