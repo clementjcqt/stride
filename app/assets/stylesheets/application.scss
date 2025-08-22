@@ -39,42 +39,19 @@ body {
   max-width: 100%;
 }
 
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f6e4d3 0%, #1e1e1e 100%);
+  transition: background 0.2s ease;
+}
+
 main {
   max-width: 100%;
 }
 
 a {
   text-decoration: none;
-}
-
-.animated-title {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.animated-title span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(-5px);
-  animation: revealLetter 1s forwards;
-}
-
-@for $i from 1 through 50 {
-  .animated-title span:nth-child(#{$i}) {
-    animation-delay: $i * 0.05s;
-  }
-}
-
-@keyframes revealLetter {
-  0% {
-    opacity: 0;
-    transform: translateX(-5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 h1, .page-title {

@@ -1,21 +1,23 @@
-<h1 class="page-title">
-  <span class="animated-title">Let's generate your program !</span>
-</h1>
+<div class="page" data-controller="scroll-gradient">
+  <h1 class="page-title">
+    <span class="animated-title">Let's generate your program !</span>
+  </h1>
 
 
-<div class="card text-center">
-  <div class="card-header">
-    <%= @event.title %>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Your goal: </h5>
-    <p class="card-text"><%= @goal_hours %> hours, <%= @goal_minutes %> minutes</p>
-    <%= form_with model: [@goal, @program], local: true, html: { class: "program-form" } do |f| %>
-      <%= hidden_field_tag :goal_id, @goal %>
-      <%= f.submit "Generate My Training Program", class: "btn btn-primary btn-large"%>
-    <% end %>
-  </div>
-  <div class="card-footer text-body-secondary">
-    <p>You will start your training on: <%= @goal.start_date %></p>
+  <div class="card text-center">
+    <div class="card-header">
+      <%= @event.title %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Your goal: </h5>
+      <p class="card-text"><%= @goal_hours %> hours, <%= @goal_minutes %> minutes</p>
+      <%= form_with model: [@goal, @program], local: true, html: { class: "program-form" } do |f| %>
+        <%= hidden_field_tag :goal_id, @goal %>
+        <%= f.submit "Generate My Training Program", class: "btn btn-primary btn-large"%>
+      <% end %>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <p>You will start your training on: <%= @goal.start_date %></p>
+    </div>
   </div>
 </div>

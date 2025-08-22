@@ -1,3 +1,7 @@
+.row {
+  width: 100%;
+}
+
 .filters-card {
   display: flex;
   justify-content: center;
@@ -147,13 +151,6 @@
   &__button { text-align: left; }
   &__button_second { text-align: right; }
   &__button_tier { text-align: center; }
-}
-
-.events-page {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #f6e4d3 0%, #1e1e1e 100%);
-  transition: background 0.2s ease;
 }
 
 .events-container {
