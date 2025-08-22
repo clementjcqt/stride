@@ -1,5 +1,5 @@
 
-  <div class="events-page" data-controller="scroll-gradient">
+  <div class="page" data-controller="scroll-gradient">
     <div class="events-container py-5" data-controller="filters">
       <h1 class="page-title">
         <span class="animated-title">Discover all events</span>
@@ -48,7 +48,19 @@
 
                 <%# BACK %>
                 <div class="event-card__back">
-                  <h4><%= event[:title] %></h4>
+                  <div class="event-card-back-header">
+                    <h4><%= event[:title] %></h4>
+                    <%= button_to toggle_favorite_event_path(event),
+                      method: :post,
+                      remote: true,
+                      class: "favorite-btn" do %>
+                      <% if current_user.favorite_events.include?(event) %>
+                        ❤️
+                      <% else %>
+                        🤍
+                      <% end %>
+                    <% end %>
+                  </div>
                   <p>Ville : <%= event[:location] %></p>
                   <p>Dans <%= (event[:date] - Date.today).to_i %> jours</p>
                   <p>Distance : <%= event[:distance_km] %> km</p>
