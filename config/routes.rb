@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_scope :user do
-    delete "users/sign_out", to: "devise/sessions#destroy", as: :destroy_user_session
-  end
+
+  devise_for :users
   root to: "pages#home"
   resources :events, only: [:index, :show] do
     resources :goals, only: [:new, :create, :show]
