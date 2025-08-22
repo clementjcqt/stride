@@ -4,7 +4,7 @@ class ProgramsController < ApplicationController
   end
 
   def show
-    @goal = Goal.find(params[:goal_id])
+    # @goal = Goal.find(params)
     @program = Program.find(params[:id])
     @sessions = @program.sessions.order(:date)
   end
