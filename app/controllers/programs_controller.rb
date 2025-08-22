@@ -23,8 +23,8 @@ You are a professional running coach. Generate a structured **training program**
 - Gender: #{current_user.gender}
 - Height: #{current_user.height} cm
 - Weight: #{current_user.weight} kg
-- Availability: #{current_user.availability&.join(", ")}
-- Medical conditions/injuries: #{current_user.conditions&.join(", ")}
+- Availability: #{current_user.availability.is_a?(Hash) ? current_user.availability.map { |k,v| "#{k}: #{v}" }.join(", ") : Array(current_user.availability).join(", ")}
+- Medical conditions/injuries: #{current_user.conditions.is_a?(Hash) ? current_user.conditions.map { |k,v| "#{k}: #{v}" }.join(", ") : Array(current_user.conditions).join(", ")}
 ## Event
 - Name: #{event.title}
 - Date: #{event.date}
