@@ -5,6 +5,9 @@ class User < ApplicationRecord
   has_many :goals, dependent: :destroy
   has_many :sessions, dependent: :destroy
   has_many :programs, through: :goals
+  has_many :favorites
+  has_many :favorite_events, through: :favorites, source: :event
+
 
   validates :first_name, :last_name, presence: true
   validates :age, numericality: { only_integer: true }, allow_nil: true
