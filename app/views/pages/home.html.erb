@@ -1,18 +1,15 @@
-<div class="page" data-controller="scroll-gradient">
-
+<div>
   <h1>Bonjour <%= @user.first_name %> </h1>
-
   <% if @program.present? %>
     <% if @next_session.present? %>
       <div class="next-session-card">
         <h2>Ta prochaine séance</h2>
-          <% if @next_session.date == Date.today %>
-            <span class="today-badge">Today</span>
-          <% end %>
+        <% if @next_session.date == Date.today %>
+          <span class="today-badge">Today</span>
+        <% end %>
         <p><strong>Date :</strong> <%= @next_session.date.strftime("%d %B %Y") %></p>
         <p><strong>Nom :</strong> <%= @next_session.program.goal.event.title %></p>
         <p><strong>Description :</strong> <%= @next_session.notes %></p>
-
         <%= link_to "Voir tout mon programme", goal_program_path(@program.goal, @program), class: "btn-primary" %>
       </div>
     <% else %>
@@ -27,13 +24,10 @@
         Stay focused, stay strong, and cross the finish line with confidence.</p>
       <div class="no-program">
         <%= link_to "Découvrir les events", events_path, class: "btn-primary" %>
-    </div>
+      </div>
     </div>
   <% end %>
-
-
   <h2>Mes événements favoris ❤️</h2>
-
   <% if @favorite_events.any? %>
     <div class="row cards-wrapper" data-filters-target="cards">
       <% @favorite_events.each do |event| %>
@@ -41,10 +35,8 @@
             data-year="<%= event.date.year %>"
             data-country="<%= event.country %>"
             data-difficulty="<%= event.difficulty %>">
-
           <div class="event-card" data-controller="flip">
             <div class="event-card__inner">
-
               <%# FACE %>
               <div class="event-card__front" style="background-image: url('<%= event.photo_url %>');">
                 <h3><%= event.title %></h3>
@@ -53,7 +45,6 @@
                 <p><%= event.event_type %></p>
                 <button class="event-card__button" data-action="click->flip#toggle">En savoir plus →</button>
               </div>
-
               <%# BACK %>
               <div class="event-card__back">
                 <div class="event-card-back-header">
@@ -88,7 +79,4 @@
       <% end %>
     </div>
   <% end %>
-
-
-
 </div>
