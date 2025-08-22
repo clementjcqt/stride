@@ -2,20 +2,26 @@
   <span class="animated-title">Let's generate your program !</span>
 </h1>
 
-
-<div class="card text-center">
+<div class=container>
+  <div class="row justify-content-center" style=text-align:center>
+      <div class="col-6 shadow p-5 mb-5 bg-body rounded">
   <div class="card-header">
-    <%= @event.title %>
+    <h2><%= @event.title %></h2>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Your goal: </h5>
-    <p class="card-text"><%= @goal_hours %> hours, <%= @goal_minutes %> minutes</p>
+    <h5 class="card-title pt-3">Your goal ⏱️ </h5>
+    <p class="card-text" style="color:#bf1ff0"><strong><%= @goal_hours %> h <%= @goal_minutes %> min</strong></p>
     <%= form_with model: [@goal, @program], local: true, html: { class: "program-form" } do |f| %>
       <%= hidden_field_tag :goal_id, @goal %>
-      <%= f.submit "Generate My Training Program", class: "btn btn-primary btn-large"%>
+      <div class="form-actions d-grid gap-2 m-3 p-3">
+      <%= f.submit "Generate My Training Program", class: "btn btn-dark m"%>
+      </div>
     <% end %>
   </div>
-  <div class="card-footer text-body-secondary">
-    <p>You will start your training on: <%= @goal.start_date %></p>
+  <div class="card-footer text-body-secondary" >
+    <p>👊 You will start your training on: <%= @goal.start_date %></p>
   </div>
+</div>
+</div>
+</div>
 </div>
