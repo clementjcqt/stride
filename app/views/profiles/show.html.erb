@@ -1,16 +1,24 @@
 <div class="page" data-controller="scroll-gradient">
-  <h1>Mon Profil</h1>
+  <div class="container mt-5">
+    <h1>My profil</h1>
+  <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 shadow p-5 mb-5 bg-body rounded">
+    <p><strong>First name :</strong> <%= @user.first_name %></p>
+    <p><strong>Last name :</strong> <%= @user.last_name %></p>
+    <p><strong>Age :</strong> <%= @user.age %></p>
+    <p><strong>Gender :</strong> <%= @user.gender %></p>
+    <p><strong>Weight :</strong> <%= @user.weight %> kg</p>
+    <p><strong>Height :</strong> <%= @user.height %> cm</p>
+    <p><strong>Level :</strong> <%= @user.level %></p>
+    <p><strong>Conditions :</strong> <%= @user.conditions&.join(", ") %></p>
+    <p><strong>Availability :</strong> <%= @user.availability&.values&.join(", ") %></p>
+  </div>
 
-  <p><strong>Prénom :</strong> <%= @user.first_name %></p>
-  <p><strong>Nom :</strong> <%= @user.last_name %></p>
-  <p><strong>Âge :</strong> <%= @user.age %></p>
-  <p><strong>Genre :</strong> <%= @user.gender %></p>
-  <p><strong>Poids :</strong> <%= @user.weight %> kg</p>
-  <p><strong>Taille :</strong> <%= @user.height %> cm</p>
-  <p><strong>Niveau :</strong> <%= @user.level %></p>
-  <p><strong>Conditions médicales / blessures :</strong> <%= @user.conditions&.join(", ") %></p>
-  <p><strong>Disponibilités :</strong> <%= @user.availability&.values&.join(", ") %></p>
 
-
-  <%= link_to "Modifier mon profil", edit_profile_path, class: "btn btn-primary mt-3" %>
+  <%= link_to "Edit my profil", edit_profile_path, class: "btn btn-dark m" %>
+  
+</div>
+</div>
+</div>
 </div>
