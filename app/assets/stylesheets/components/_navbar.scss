@@ -1,6 +1,9 @@
 .navbar-stride {
   background-color: $primary-color;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   .navbar-brand {
     font-weight: bold;
