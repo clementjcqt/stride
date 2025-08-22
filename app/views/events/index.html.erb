@@ -66,13 +66,14 @@
                   <p>Distance : <%= event[:distance_km] %> km</p>
                   <p>Dénivelé : <%= event[:denivele] %> m</p>
                   <br>
-                  <button class="event-card__button_tier">
-                    <a href="<%= event[:source_url] %>" target="_blank">Voir l'événement</a>
-                  </button>
-                  <%= link_to "Créer un goal", "/events/#{event[:id]}/goals/new", class: "event-card__button_second" %>
-                  <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
+                  <%= link_to "Créer un goal", "/events/#{event[:id]}/goals/new", class: "event-card__button_tier" %>
+                  <div class="event-card__buttons">
+                    <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
+                    <button class="event-card__button_second">
+                      <a href="<%= event[:source_url] %>" target="_blank">Voir l'événement</a>
+                    </button>
+                  </div>
                 </div>
-
               </div>
             </div>
           </div>
