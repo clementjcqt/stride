@@ -29,7 +29,7 @@ $button-color: #18d78c;
 // ----------------------
 @import "bootstrap";
 @import "font-awesome";
- 
+
 
 // ----------------------
 // Styles généraux
@@ -59,12 +59,13 @@ a {
 h1, .page-title {
   font-family: 'Lexend', sans-serif;
   font-weight: 900;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: 1.5rem;
   text-align: center;
+  padding-top: 4rem;
   margin-bottom: 2rem;
-  text-transform: uppercase;
   letter-spacing: 2px;
   color: $title-color;
+  letter-spacing: -0.5px;
 }
 
 
