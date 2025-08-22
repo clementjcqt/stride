@@ -5,6 +5,8 @@ $primary-color: #bf1ff0;
 $accent-color: #046b53;
 $background-color: #f6e4d3;
 $text-color: #0d162a;
+$title-color: #2c3579;
+$button-color: #18d78c;
 
 // ----------------------
 // Config graphiques / bibliothèques
@@ -32,7 +34,7 @@ $text-color: #0d162a;
 // Styles généraux
 // ----------------------
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lexend', Helvetica, Arial, sans-serif;
   background-color: $background-color;
   color: $text-color;
 }
@@ -72,14 +74,14 @@ a {
 }
 
 h1, .page-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: 900;
   font-size: clamp(2rem, 5vw, 3.5rem);
   text-align: center;
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: $primary-color;
+  color: $title-color;
 }
 
 
