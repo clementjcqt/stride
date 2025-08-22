@@ -1,14 +1,15 @@
 <div class="page" data-controller="scroll-gradient">
-  <h1 class="page-title">
-    <span class="animated-title">Détails de la session</span>
-  </h1>
-  <p><strong>Programme :</strong> <%= @program.goal.event.title %></p>
-  <p><strong>Semaine :</strong> <%= @session.week_number %></p>
-  <p><strong>Date :</strong> <%= @session.date.strftime("%d %b %Y") %></p>
-  <p><strong>Type :</strong> <%= @session.session_type.titleize %></p>
-  <p><strong>Durée :</strong> <%= @session.duration_min %> min</p>
-  <p><strong>Distance :</strong> <%= @session.distance_km %> km</p>
-  <p><strong>Notes :</strong> <%= @session.notes %></p>
-
-  <%= link_to "Retour au programme", program_path(@program), class: "btn btn-secondary" %>
+  <h1 class="page-title">Session Details</h1>
+  <div class="container col-5 shadow p-5 mb-5 bg-body rounded-3 text-center">
+    <p><span class="fw-bold fs-6">Program : </span><%= @program.goal.event.title %></p>
+    <p><span class="fw-bold fs-6">Week : </span> <%= @session.week_number %></p>
+    <p><span class="fw-bold fs-6">Date : </span> <%= @session.date.strftime("%d %b %Y") %></p>
+    <p><span class="fw-bold fs-6">Type : </span><%= @session.session_type.titleize %></p>
+    <p><span class="fw-bold fs-6">Length : </span><%= @session.duration_min %> min</p>
+    <p><span class="fw-bold fs-6">Distance : </span><%= @session.distance_km %> km</p>
+    <p><span class="fw-bold fs-6">Notes : </span><%= @session.notes %></p>
+    <%= link_to "Back to program", program_path(@program), class: "btn btn-dark m" %>
+  </div>
 </div>
+
+
