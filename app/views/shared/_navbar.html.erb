@@ -13,7 +13,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
               <li class="nav-item"><%= link_to "Events", events_path, class: "nav-link" %></li>
-              <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, class: "nav-link", data: {turbo_method: :delete} %></li>
+              <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, class: "nav-link", data:{turbo_method: :delete} %></li>
             </div>
           </li>
         <% else %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users,
+             controllers: { sessions: "devise/sessions" }
   root to: "pages#home"
   resources :events, only: [:index, :show] do
     resources :goals, only: [:new, :create, :show]
