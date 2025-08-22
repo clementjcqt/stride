@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_08_18_154417) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,15 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154417) do
     t.string "country"
     t.string "photo_url"
     t.string "source_url"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_favorites_on_event_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "goals", force: :cascade do |t|
@@ -85,6 +94,8 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154417) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "events"
+  add_foreign_key "favorites", "users"
   add_foreign_key "goals", "events"
   add_foreign_key "goals", "users"
   add_foreign_key "sessions", "programs"

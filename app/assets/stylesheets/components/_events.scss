@@ -1,3 +1,7 @@
+.row {
+  width: 100%;
+}
+
 .filters-card {
   display: flex;
   justify-content: center;
@@ -149,15 +153,37 @@
   &__button_tier { text-align: center; }
 }
 
-.events-page {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #f6e4d3 0%, #1e1e1e 100%);
-  transition: background 0.2s ease;
-}
-
 .events-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+
+
+
+.event-card-back-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-card-title {
+  flex: 1;
+  text-align: center;
+}
+
+.favorite-btn {
+  font-size: 24px;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+  }
 }

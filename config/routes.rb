@@ -19,6 +19,11 @@ Rails.application.routes.draw do
 
   resource :profile, only: [:show, :edit, :update]
 
+  resources :events do
+    post "toggle_favorite", on: :member
+  end
+
+
   # resources :programs, only: [:show, ] do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
