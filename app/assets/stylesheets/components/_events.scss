@@ -1,5 +1,8 @@
 .row {
   width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  justify-content: center;
 }
 
 .filters-card {
@@ -46,17 +49,22 @@
   margin: 0;
   padding: 0;
   background: transparent;
+    justify-content: center;
 }
 
 .event-card-wrapper {
   flex: 1 1 calc(33.333% - 1rem);
   margin: 0;
   padding: 0;
+    justify-content: center;
 }
 
 .event-card {
   perspective: 1000px;
   cursor: default;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 
   &__inner {
     position: relative;
@@ -199,8 +207,8 @@
 
 .events-container {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .event-card-back-header {
