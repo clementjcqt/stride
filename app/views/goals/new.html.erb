@@ -1,27 +1,35 @@
-<div>
-  <h1 class="page-title">
-    <span class="animated-title">Set your goal</span>
-  </h1>
-  <%= simple_form_for [@event, @goal], html: { class: "mt-4 container col-6" } do |f| %>
-    <%= f.input :start_date, :as => :date,
-      label: "When can you start your training program ?",
-      input_html: { class: "form-control" },
-      wrapper_html: { class: "mb-3" }%>
-    <p>What is your goal ?</p>
-    <span>Goal time in minutes</span>
-    <div class="goal-time d-flex justify-content-start gap-5">
-      <%= f.number_field :goal_time,
-      input_html: { class: "form-control" },
-      value: @goal.goal_time,
-      wrapper_html: { class: "mb-3" }
-    %>
+<h2 class="text-center m-5"><strong>Set your goal</strong></h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 shadow p-3 mb-5 bg-body rounded">
+
+      <%= simple_form_for [@event, @goal] do |f| %>
+
+        <%= f.input :start_date, as: :date,
+          label: raw("<strong>When can you start your training program ?</strong>"),
+          input_html: { class: "form-control" },
+          wrapper_html: { class: "mb-3" } %>
+
+        <p><strong>What is your goal ?</strong></p>
+        <span>Goal time in minutes</span>
+        <div class="goal-time d-flex justify-content-start gap-5">
+          <%= f.number_field :goal_time,
+            input_html: { class: "form-control" },
+            value: @goal.goal_time,
+            wrapper_html: { class: "mb-3" } %>
+        </div>
+
+        <%= f.input :max_time_per_day,
+          label: raw("<strong>How many hours a day can you train ?</strong>"),
+          input_html: { class: "form-control" },
+          wrapper_html: { class: "mb-3" } %>
+
+        <div class="form-actions d-grid gap-2">
+          <%= f.button :submit, "I'm done!", class: 'btn btn-dark' %>
+        </div>
+
+      <% end %>
     </div>
-    <%= f.input :max_time_per_day,
-      label: "How many hours a day can you train ?",
-      input_html: { class: "form-control" },
-      wrapper_html: { class: "mb-3" }
-    %>
-    <%= f.button :submit, "I'm done!", class: 'btn btn-primary mt-3' %>
-  <% end %>
+  </div>
 
 </div>
