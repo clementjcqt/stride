@@ -1,11 +1,11 @@
 <div>
-  <h1>Bonjour <%= @user.first_name %> </h1>
+  <h1 class="pt-4">Bonjour <%= @user.first_name %> </h1>
   <% if @program.present? %>
     <% if @next_session.present? %>
       <div class="next-session-card">
         <h2>Ta prochaine séance</h2>
         <% if @next_session.date == Date.today %>
-          <span class="today-badge">Today</span>
+          <span class="today-badge mt-1">Today</span>
         <% end %>
         <p><strong>Date :</strong> <%= @next_session.date.strftime("%d %B %Y") %></p>
         <p><strong>Nom :</strong> <%= @next_session.program.goal.event.title %></p>
