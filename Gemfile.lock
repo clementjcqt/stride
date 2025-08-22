@@ -1,4 +1,18 @@
 GIT
+  remote: https://github.com/SuzukiRyuichiro/ruby_llm.git
+  revision: a8f00550865b8c11ff8b7b5f3dfa7316151c0c4d
+  specs:
+    ruby_llm (1.6.4)
+      base64
+      event_stream_parser (~> 1)
+      faraday (>= 1.10.0)
+      faraday-multipart (>= 1)
+      faraday-net_http (>= 1)
+      faraday-retry (>= 1)
+      marcel (~> 1.0)
+      zeitwerk (~> 2)
+
+GIT
   remote: https://github.com/heartcombo/simple_form.git
   revision: c2c7faf3e532072e1ef511a97d677ae0e7c38957
   specs:
@@ -281,15 +295,6 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.4.1)
-    ruby_llm (1.6.2)
-      base64
-      event_stream_parser (~> 1)
-      faraday (>= 1.10.0)
-      faraday-multipart (>= 1)
-      faraday-net_http (>= 1)
-      faraday-retry (>= 1)
-      marcel (~> 1.0)
-      zeitwerk (~> 2)
     rubyzip (3.0.1)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -369,7 +374,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.2)
-  ruby_llm
+  ruby_llm!
   sassc-rails
   selenium-webdriver
   simple_form!
