@@ -1,58 +1,62 @@
 <div class="container mt-5">
   <h1 class="page-title text-center">Mon Profil</h1>
+<div class="row justify-content-center">
+      <div class="col-8 shadow p-5 mb-5 bg-body rounded">
 
   <%= form_with model: @user, url: profile_path, method: :patch, local: true do |f| %>
     <div class="row mb-3">
       <div class="col-md-6">
-        <%= f.label :first_name, "Prénom", class: "form-label" %>
+        <strong><%= f.label :first_name, "First name", class: "form-label" %></strong>
         <%= f.text_field :first_name, class: "form-control", required: true %>
       </div>
       <div class="col-md-6">
-        <%= f.label :last_name, "Nom", class: "form-label" %>
+        <strong><%= f.label :last_name, "Last name", class: "form-label" %></strong>
         <%= f.text_field :last_name, class: "form-control", required: true %>
       </div>
     </div>
 
     <div class="row mb-3">
       <div class="col-md-4">
-        <%= f.label :age, "Âge", class: "form-label" %>
+        <strong><%= f.label :age, "Age", class: "form-label" %></strong>
         <%= f.number_field :age, class: "form-control", min: 0 %>
       </div>
       <div class="col-md-4">
-        <%= f.label :gender, "Sexe", class: "form-label" %>
-        <%= f.select :gender, ["Homme", "Femme", "Autre"], { include_blank: "Sélectionner" }, class: "form-select" %>
+        <strong><%= f.label :gender, "Gender", class: "form-label" %></strong>
+        <%= f.select :gender, ["Homme", "Femme", "Autre"], { include_blank: "Select" }, class: "form-select" %>
       </div>
       <div class="col-md-4">
-        <%= f.label :level, "Niveau", class: "form-label" %>
-        <%= f.select :level, ["Débutant", "Intermédiaire", "Avancé"], { include_blank: "Sélectionner" }, class: "form-select" %>
+        <strong><%= f.label :level, "Level", class: "form-label" %></strong>
+        <%= f.select :level, ["Débutant", "Intermédiaire", "Avancé"], { include_blank: "Select" }, class: "form-select" %>
       </div>
     </div>
 
     <div class="row mb-3">
       <div class="col-md-6">
-        <%= f.label :height, "Taille (cm)", class: "form-label" %>
+        <strong><%= f.label :height, "Height (cm)", class: "form-label" %></strong>
         <%= f.number_field :height, class: "form-control", min: 0 %>
       </div>
       <div class="col-md-6">
-        <%= f.label :weight, "Poids (kg)", class: "form-label" %>
+        <strong><%= f.label :weight, "Weight (kg)", class: "form-label" %></strong>
         <%= f.number_field :weight, class: "form-control", min: 0 %>
       </div>
     </div>
 
     <div class="mb-3">
-      <%= f.label :conditions, "Conditions médicales / blessures", class: "form-label" %>
-      <%= f.text_area :conditions, class: "form-control", placeholder: "Séparer par des virgules", rows: 3 %>
-      <small class="text-muted">Exemple : Asthme, Entorse cheville</small>
+      <strong><%= f.label :conditions, "Conditions", class: "form-label" %></strong>
+      <%= f.text_area :conditions, class: "form-control", placeholder: "Separate by commas", rows: 3 %>
+      <small class="text-muted">Example: Asthma, Sprained ankle</small>
     </div>
 
     <div class="mb-3">
-      <%= f.label :availability, "Disponibilités", class: "form-label" %>
-      <%= f.select :availability, [["Matin", "matin"], ["Après-midi", "après-midi"], ["Soir", "soir"]], {}, { multiple: true, class: "form-select" } %>
-      <small class="text-muted">Maintenir Ctrl/Cmd pour sélectionner plusieurs plages</small>
+      <strong><%= f.label :availability, "Availability", class: "form-label" %></strong>
+      <%= f.select :availability, [["Morning", "morning"], ["Afternoon", "afternoon"], ["Evening", "evening"]], {}, { multiple: true, class: "form-select" } %>
+      <small class="text-muted">Hold Ctrl/Cmd to select multiple ranges</small>
     </div>
 
     <div class="text-center">
-      <%= f.submit "Enregistrer mon profil", class: "btn btn-primary" %>
+      <%= f.submit "Save my profil", class: "btn btn-dark m" %>
     </div>
   <% end %>
+  </div>
+  </div>
 </div>
