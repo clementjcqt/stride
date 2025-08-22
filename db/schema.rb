@@ -9,11 +9,9 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
-
 ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "location"
@@ -29,7 +27,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
     t.string "photo_url"
     t.string "source_url"
   end
-
   create_table "favorites", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
@@ -38,7 +35,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
     t.index ["event_id"], name: "index_favorites_on_event_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
-
   create_table "goals", force: :cascade do |t|
     t.bigint "event_id", null: false
     t.bigint "user_id", null: false
@@ -50,7 +46,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
     t.index ["event_id"], name: "index_goals_on_event_id"
     t.index ["user_id"], name: "index_goals_on_user_id"
   end
-
   create_table "programs", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
@@ -58,7 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
     t.bigint "goal_id"
     t.index ["goal_id"], name: "index_programs_on_goal_id"
   end
-
   create_table "sessions", force: :cascade do |t|
     t.string "session_type"
     t.bigint "program_id", null: false
@@ -71,7 +65,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
     t.date "date"
     t.index ["program_id"], name: "index_sessions_on_program_id"
   end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -80,20 +73,19 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_18_154418) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "gender"
-    t.string "country"
+    t.string "first_name"
+    t.string "last_name"
     t.integer "age"
+    t.string "gender"
     t.integer "height"
     t.integer "weight"
     t.string "level"
-    t.string "availability"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "conditions"
+    t.text "conditions"
+    t.text "availability"
+    t.string "country"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
   add_foreign_key "favorites", "events"
   add_foreign_key "favorites", "users"
   add_foreign_key "goals", "events"
