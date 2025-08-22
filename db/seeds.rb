@@ -91,7 +91,7 @@ Event.create(
 )
 
 Event.create(
-  title: "Schneider Electric Marathon",
+  title: "Schneider Electric",
   location: "Paris",
   country: "France",
   date: "2026-04-12",
@@ -99,7 +99,7 @@ Event.create(
   distance_km: 42.195,
   denivele: 100,
   difficulty: "Advanced",
-  photo_url: "https://mybestruns.com/racephoto/1265.jpg",
+  photo_url: "https://th.bing.com/th/id/R.d245dd12314abaa08e2d434d9ae5f5a5?rik=g6wG8NFBb5Libw&pid=ImgRaw&r=0",
   source_url: "https://www.schneiderelectricparismarathon.com/fr/"
 )
 
