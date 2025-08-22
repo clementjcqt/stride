@@ -46,7 +46,7 @@ Event.create(
   event_type: "Semi-Marathon",
   distance_km: 21.0975,
   denivele: 0,
-  difficulty: "Intermediate",
+  difficulty: "Beginner",
   photo_url: "https://images.ahotu.com/yod7X2ELEkCMMBsTYwyUPyov?w=1920&q=75&f=webp",
   source_url: "https://en.wikipedia.org/wiki/Semi-Marathon_d'Athènes"
 )
@@ -124,7 +124,7 @@ Event.create(
   event_type: "Road Marathon",
   distance_km: 42.195,
   denivele: 120,
-  difficulty: "Advanced",
+  difficulty: "Beginner",
   photo_url: "https://stadion-actu.fr/wp-content/uploads/2023/07/Marathon-des-Alpes-Maritimes-Nice-Cannes-2023-inscriptions.jpg",
   source_url: "https://pro.timeto.com/fr-FR/company/team/events/marathon-des-alpes-maritimes-nice-cannes"
 )

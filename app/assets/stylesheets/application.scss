@@ -1,10 +1,10 @@
 // ----------------------
 // Variables globales
 // ----------------------
-$primary-color: #4f46e5;
-$accent-color: #facc15;
-$background-color: #f9fafb;
-$text-color: #111827;
+$primary-color: #bf1ff0;
+$accent-color: #046b53;
+$background-color: #f6e4d3;
+$text-color: #0d162a;
 
 // ----------------------
 // Config graphiques / bibliothèques
@@ -39,6 +39,48 @@ body {
 a {
   text-decoration: none;
 }
+
+.animated-title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animated-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-5px);
+  animation: revealLetter 1s forwards;
+}
+
+@for $i from 1 through 50 {
+  .animated-title span:nth-child(#{$i}) {
+    animation-delay: $i * 0.05s;
+  }
+}
+
+@keyframes revealLetter {
+  0% {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+h1, .page-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $primary-color;
+}
+
 
 // Your CSS partials
 @import "components/index";

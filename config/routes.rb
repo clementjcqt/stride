@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :sessions, only: [:show]
   end
 
+  resource :profile, only: [:show, :edit, :update]
+
   # resources :programs, only: [:show, ] do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

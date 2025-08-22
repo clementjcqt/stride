@@ -6,10 +6,12 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
+          <%= f.input :first_name, required: true %>
+          <%= f.input :last_name, required: true %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "email" }%>
+                      input_html: { autocomplete: "email" } %>
           <%= f.input :password,
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -18,6 +20,7 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
+
 
         <div class="form-actions d-grid gap-2">
           <%= f.button :submit, "Sign up", class: "btn btn-dark m" %>

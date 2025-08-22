@@ -1,5 +1,6 @@
-<h1>Programme pour <%= @program.goal.event.title %></h1>
-<p>Objectif : <%= @program.goal.goal_time %> min</p>
+<h1 class="page-title">
+  <span class="animated-title">Programme pour <%= @program.goal.event.title %></span>
+</h1>
 
 <% @sessions.group_by { |s| s.date.strftime("%B %Y") }.each do |month_name, month_sessions| %>
   <h2><%= month_name %></h2>
