@@ -1,25 +1,28 @@
-<h1 class="page-title">
-  <span class="animated-title">Programme pour <%= @program.goal.event.title %></span>
-</h1>
+<div class="page" data-controller="scroll-gradient">
 
-<% @sessions.group_by { |s| s.date.strftime("%B %Y") }.each do |month_name, month_sessions| %>
-  <h2><%= month_name %></h2>
-  <div class="month">
-    <% month_sessions.group_by(&:week_number).each do |week_number, sessions| %>
-      <div class="week">
-        <h3>Semaine <%= week_number %></h3>
-        <ul>
-          <% sessions.each do |session| %>
-            <li>
-              <strong><%= session.session_type.titleize %></strong>
-              le <%= session.date.strftime("%d %b %Y") %> -
-              <%= session.duration_min %> min,
-              <%= session.distance_km %> km
-              <%= link_to "Voir détails", program_session_path(@program, session), class: "btn btn-sm btn-outline-primary" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+  <h1 class="page-title">
+    <span class="animated-title">Programme pour <%= @program.goal.event.title %></span>
+  </h1>
+
+  <% @sessions.group_by { |s| s.date.strftime("%B %Y") }.each do |month_name, month_sessions| %>
+    <h2><%= month_name %></h2>
+    <div class="month">
+      <% month_sessions.group_by(&:week_number).each do |week_number, sessions| %>
+        <div class="week">
+          <h3>Semaine <%= week_number %></h3>
+          <ul>
+            <% sessions.each do |session| %>
+              <li>
+                <strong><%= session.session_type.titleize %></strong>
+                le <%= session.date.strftime("%d %b %Y") %> -
+                <%= session.duration_min %> min,
+                <%= session.distance_km %> km
+                <%= link_to "Voir détails", program_session_path(@program, session), class: "btn btn-sm btn-outline-primary" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
