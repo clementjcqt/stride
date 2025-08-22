@@ -137,20 +137,64 @@
   }
 
   &__inner.is-flipped { transform: rotateY(180deg); }
+}
 
-  &__button, &__button_second, &__button_tier {
+.event-card__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.event-card {
+  &__button,
+  &__button_second,
+  &__button_tier {
     background: none;
     border: none;
-    color: white;
     cursor: pointer;
+    font-family: inherit;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &__button, &__button_second { font-weight: bold; }
-  &__button { text-align: left; }
-  &__button_second { text-align: right; }
-  &__button_tier { text-align: center; }
+  &__button,
+  &__button_tier {
+    font-weight: bold;
+  }
+
+  &__button {
+    font-size: 0.95rem;
+    color: white;
+    text-align: left;
+  }
+
+  &__button_second {
+    font-size: 0.9rem;
+    color: #d3d3d3;
+    text-align: right;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__button_tier {
+    font-size: 1.05rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 2px 6px $primary-color;
+  }
 }
 
 .events-container {
@@ -158,9 +202,6 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-
-
 
 .event-card-back-header {
   display: flex;

@@ -20,16 +20,14 @@
       <%= link_to "Découvrir les events", events_path, class: "btn-secondary" %>
     <% end %>
   <% else %>
-    <div class="no-program">
-      <p>Tu n'as pas encore configuré ton programme.
-      Ne tarde pas à le faire en allant découvrir les events ✨</p>
-      <%= link_to "Découvrir les events", events_path, class: "btn-primary" %>
-    </div>
     <div class="banner container w-100 mx-auto py-5 rounded-3">
       <h1>Welcome to Stride</h1>
       <h2>Stride - Your Run, Your Victory.</h2>
       <p>Crush your marathon or trail goals with a personalized training plan built around you.
         Stay focused, stay strong, and cross the finish line with confidence.</p>
+      <div class="no-program">
+        <%= link_to "Découvrir les events", events_path, class: "btn-primary" %>
+    </div>
     </div>
   <% end %>
 
@@ -76,21 +74,19 @@
                 <p>Distance : <%= event.distance_km %> km</p>
                 <p>Dénivelé : <%= event.denivele %> m</p>
                 <br>
-                <button class="event-card__button_tier">
-                  <a href="<%= event.source_url %>" target="_blank">Voir l'événement</a>
-                </button>
-                <%= link_to "Créer un goal", new_event_goal_path(event), class: "event-card__button_second" %>
-                <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
+                <%= link_to "Créer un goal", "/events/#{event[:id]}/goals/new", class: "event-card__button_tier" %>
+                <div class="event-card__buttons">
+                  <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
+                  <button class="event-card__button_second">
+                    <a href="<%= event[:source_url] %>" target="_blank">Voir l'événement</a>
+                  </button>
+                </div>
               </div>
-
             </div>
           </div>
         </div>
       <% end %>
     </div>
-  <% else %>
-    <p>Tu n'as encore aucun favori. Like des events pour les ajouter ici !</p>
-    <%= link_to "Découvrir les events", events_path, class: "btn-primary" %>
   <% end %>
 
 
