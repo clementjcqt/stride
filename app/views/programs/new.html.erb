@@ -1,4 +1,0 @@
-<%= form_with model: [@goal, @program ], local: true, html: { class: "program-form" } do |f| %>
-  <%= hidden_field_tag :goal_id, @goal %>
-  <%= f.submit "Generate My Training Program", class: "btn btn-primary btn-large"%>
-<% end %>
