@@ -20,6 +20,7 @@ $text-color: #0d162a;
 @import "components/programs";
 @import "components/sessions";
 @import "components/banner";
+@import "components/home_goal_session";
 
 // ----------------------
 // Librairies externes
@@ -35,6 +36,11 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: $background-color;
   color: $text-color;
+  max-width: 100%;
+}
+
+main {
+  max-width: 100%;
 }
 
 a {

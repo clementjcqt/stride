@@ -1,6 +1,98 @@
-<div class="banner container w-100 mx-auto py-5 rounded-3">
-  <h1>Welcome to Stride</h1>
-  <h2>Stride - Your Run, Your Victory.</h2>
-  <p>Crush your marathon or trail goals with a personalized training plan built around you.
-    Stay focused, stay strong, and cross the finish line with confidence.</p>
+<div class="homepage">
+
+  <h1>Bonjour <%= @user.first_name %> </h1>
+
+  <% if @program.present? %>
+    <% if @next_session.present? %>
+      <div class="next-session-card">
+        <h2>Ta prochaine séance</h2>
+          <% if @next_session.date == Date.today %>
+            <span class="today-badge">Today</span>
+          <% end %>
+        <p><strong>Date :</strong> <%= @next_session.date.strftime("%d %B %Y") %></p>
+        <p><strong>Nom :</strong> <%= @next_session.program.goal.event.title %></p>
+        <p><strong>Description :</strong> <%= @next_session.notes %></p>
+
+        <%= link_to "Voir tout mon programme", goal_program_path(@program.goal, @program), class: "btn-primary" %>
+      </div>
+    <% else %>
+      <p>Ton programme est terminé, bravo 🎉</p>
+      <%= link_to "Découvrir les events", events_path, class: "btn-secondary" %>
+    <% end %>
+  <% else %>
+    <div class="no-program">
+      <p>Tu n'as pas encore configuré ton programme.
+      Ne tarde pas à le faire en allant découvrir les events ✨</p>
+      <%= link_to "Découvrir les events", events_path, class: "btn-primary" %>
+    </div>
+    <div class="banner container w-100 mx-auto py-5 rounded-3">
+      <h1>Welcome to Stride</h1>
+      <h2>Stride - Your Run, Your Victory.</h2>
+      <p>Crush your marathon or trail goals with a personalized training plan built around you.
+        Stay focused, stay strong, and cross the finish line with confidence.</p>
+    </div>
+  <% end %>
+
+
+  <h2>Mes événements favoris ❤️</h2>
+
+  <% if @favorite_events.any? %>
+    <div class="row cards-wrapper" data-filters-target="cards">
+      <% @favorite_events.each do |event| %>
+        <div class="event-card-wrapper"
+            data-year="<%= event.date.year %>"
+            data-country="<%= event.country %>"
+            data-difficulty="<%= event.difficulty %>">
+
+          <div class="event-card" data-controller="flip">
+            <div class="event-card__inner">
+
+              <%# FACE %>
+              <div class="event-card__front" style="background-image: url('<%= event.photo_url %>');">
+                <h3><%= event.title %></h3>
+                <span class="event-card__badge <%= event.difficulty %>"><%= event.difficulty %></span>
+                <p><%= event.date.strftime("%d %B %Y") %> • <%= event.country %></p>
+                <p><%= event.event_type %></p>
+                <button class="event-card__button" data-action="click->flip#toggle">En savoir plus →</button>
+              </div>
+
+              <%# BACK %>
+              <div class="event-card__back">
+                <div class="event-card-back-header">
+                  <h4><%= event.title %></h4>
+                  <%= button_to toggle_favorite_event_path(event),
+                        method: :post,
+                        remote: true,
+                        class: "favorite-btn" do %>
+                    <% if current_user.favorite_events.include?(event) %>
+                      ❤️
+                    <% else %>
+                      🤍
+                    <% end %>
+                  <% end %>
+                </div>
+                <p>Ville : <%= event.location %></p>
+                <p>Dans <%= (event.date - Date.today).to_i %> jours</p>
+                <p>Distance : <%= event.distance_km %> km</p>
+                <p>Dénivelé : <%= event.denivele %> m</p>
+                <br>
+                <button class="event-card__button_tier">
+                  <a href="<%= event.source_url %>" target="_blank">Voir l'événement</a>
+                </button>
+                <%= link_to "Créer un goal", new_event_goal_path(event), class: "event-card__button_second" %>
+                <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>Tu n'as encore aucun favori. Like des events pour les ajouter ici !</p>
+    <%= link_to "Découvrir les events", events_path, class: "btn-primary" %>
+  <% end %>
+
+
+
 </div>
