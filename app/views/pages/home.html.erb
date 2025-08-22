@@ -27,9 +27,10 @@
       </div>
     </div>
   <% end %>
-  <h2>Mes événements favoris ❤️</h2>
+
   <% if @favorite_events.any? %>
     <div class="row cards-wrapper" data-filters-target="cards">
+      <h2>Mes événements favoris ❤️</h2>
       <% @favorite_events.each do |event| %>
         <div class="event-card-wrapper"
             data-year="<%= event.date.year %>"
