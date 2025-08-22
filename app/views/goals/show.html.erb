@@ -10,7 +10,10 @@
   <div class="card-body">
     <h5 class="card-title">Your goal: </h5>
     <p class="card-text"><%= @goal_hours %> hours, <%= @goal_minutes %> minutes</p>
-    <%= link_to "Create a personnalised program", new_goal_program_path(@goal), class:"btn btn-primary"  %>
+    <%= form_with model: [@goal, @program], local: true, html: { class: "program-form" } do |f| %>
+      <%= hidden_field_tag :goal_id, @goal %>
+      <%= f.submit "Generate My Training Program", class: "btn btn-primary btn-large"%>
+    <% end %>
   </div>
   <div class="card-footer text-body-secondary">
     <p>You will start your training on: <%= @goal.start_date %></p>

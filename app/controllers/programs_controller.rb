@@ -2,16 +2,14 @@ class ProgramsController < ApplicationController
   def index
     @programs = Program.all
   end
+
   def show
+    @goal = Goal.find(params[:goal_id])
     @program = Program.find(params[:id])
     @sessions = @program.sessions.order(:date)
   end
-  def new
-    @goal = Goal.find(params[:goal_id])
-    @program = Program.new
-  end
-  def create
 
+  def create
     goal = Goal.find(params[:goal_id])
     event = goal.event
 
@@ -129,7 +127,6 @@ PROMPT
     @program.update!(content: response.content)
 
     redirect_to goal_program_path(@program.goal, @program), notice: "Programme créé avec succès !"
-
   end
 
   private
