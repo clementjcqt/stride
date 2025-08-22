@@ -1,0 +1,84 @@
+.next-session-card {
+  background: linear-gradient(135deg, #c3a5ff, #aaa7ff);
+  border-radius: 24px;
+  padding: 30px 25px;
+  max-width: 90%;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #bb9aff, #9b98ff);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #1a1a1a;
+  }
+
+  p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    strong {
+      color: #010305;
+    }
+
+    &.session-info {
+      font-weight: 500;
+      font-size: 15px;
+      color: #555;
+    }
+  }
+
+  .btn-primary {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 26px;
+    border-radius: 14px;
+    font-weight: 700;
+    background-color: #32363b;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #082647;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+}
+
+.next-session-card .today-badge {
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffda83;
+  color: #1a1a1a;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}

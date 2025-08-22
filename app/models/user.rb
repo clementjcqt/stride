@@ -8,7 +8,6 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorite_events, through: :favorites, source: :event
 
-
   validates :first_name, :last_name, presence: true
   validates :age, numericality: { only_integer: true }, allow_nil: true
   validates :height, :weight, numericality: { only_integer: true }, allow_nil: true
