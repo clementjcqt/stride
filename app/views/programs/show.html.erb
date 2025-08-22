@@ -1,11 +1,11 @@
-<div>
+<div class="container">
 
   <h1 class="page-title">
     <span class="animated-title">Programme pour <%= @program.goal.event.title %></span>
   </h1>
 
   <% @sessions.group_by { |s| s.date.strftime("%B %Y") }.each do |month_name, month_sessions| %>
-    <h2><%= month_name %></h2>
+    <h2 style="text-align:center"><%= month_name %></h2>
     <div class="month">
       <% month_sessions.group_by(&:week_number).each do |week_number, sessions| %>
         <div class="week">
