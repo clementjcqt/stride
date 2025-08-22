@@ -1,20 +1,25 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<nav class="navbar navbar-expand-lg navbar-light navbar-stride py-3">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "STRIDE_Logo.png", alt: "Stride Logo", class: "navbar-logo" %>
     <% end %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
         <% if user_signed_in? %>
-          <li class="nav-item dropdown">
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
-              <li class="nav-item"><%= link_to "Events", events_path, class: "nav-link" %></li>
-              <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, class: "nav-link", data:{turbo_method: :delete} %></li>
-            </div>
+          <li class="nav-item">
+            <%= link_to "Profile", profile_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Events", events_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Log out", destroy_user_session_path, class: "nav-link", data:{turbo_method: :delete} %>
+
           </li>
         <% else %>
           <li class="nav-item">
@@ -24,4 +29,4 @@
       </ul>
     </div>
   </div>
-</div>
+</nav>

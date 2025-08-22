@@ -1,35 +1,71 @@
-<div class="container py-5">
-  <div class="row">
-    <% @events.each do |event| %>
-      <div class="col-md-4 mb-4">
-        <div class="event-card" data-controller="flip">
-          <div class="event-card__inner">
 
-            <!-- Front -->
-            <div class="event-card__front" style="background-image: url('<%= event[:photo_url] %>');">
-              <h3><%= event[:title] %></h3>
-              <span class="event-card__badge <%= event[:difficulty] %>"><%= event[:difficulty] %></span>
-              <p><%= event[:date] %> • <%= event[:country] %></p>
-              <p><%= event[:type] %></p>
-              <button class="event-card__button" data-action="click->flip#toggle">En savoir plus →</button>
-            </div>
+  <div class="events-page" data-controller="scroll-gradient">
+    <div class="events-container py-5" data-controller="filters">
+      <h1 class="page-title">
+        <span class="animated-title">Discover all events</span>
+      </h1>
 
-            <!-- Back -->
-            <div class="event-card__back">
-              <h4><%= event[:title] %></h4>
-              <p>Ville : <%= event[:location] %></p>
-              <p>Dans <%= (event[:date] - Date.today).to_i %> jours</p>
-              <p>Distance : <%= event[:distance_km] %> km</p>
-              <p>Dénivelé : <%= event[:denivele] %> m</p>
-              <br>
-              <button class="event-card__button_tier"><a href="<%= event[:source_url] %>" class="event-card__button_tier" target="_blank">Voir l'événement </a></button>
-               <%= link_to "Créer un goal", "/events/#{event[:id]}/goals/new", class: "event-card__button_second" %>
-              <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
-            </div>
 
-          </div>
-        </div>
+      <div class="filters-card">
+        <select data-filters-target="year" data-action="change->filters#apply" class="filter-select">
+          <option value="">Toutes les années</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+        </select>
+
+        <select data-filters-target="country" data-action="change->filters#apply" class="filter-select">
+          <option value="">Tous les pays</option>
+          <% @events.map { |e| e[:country] }.uniq.sort.each do |country| %>
+            <option value="<%= country %>"><%= country %></option>
+          <% end %>
+        </select>
+
+        <select data-filters-target="difficulty" data-action="change->filters#apply" class="filter-select">
+          <option value="">Tous niveaux</option>
+          <% @events.map { |e| e[:difficulty] }.uniq.sort.each do |diff| %>
+            <option value="<%= diff %>"><%= diff %></option>
+          <% end %>
+        </select>
       </div>
-    <% end %>
+
+      <div class="row cards-wrapper" data-filters-target="cards">
+        <% @events.each do |event| %>
+          <div class="event-card-wrapper"
+              data-year="<%= event[:date].year %>"
+              data-country="<%= event[:country] %>"
+              data-difficulty="<%= event[:difficulty] %>">
+            <div class="event-card" data-controller="flip">
+              <div class="event-card__inner">
+
+                <%# FACE %>
+                <div class="event-card__front" style="background-image: url('<%= event[:photo_url] %>');">
+                  <h3><%= event[:title] %></h3>
+                  <span class="event-card__badge <%= event[:difficulty] %>"><%= event[:difficulty] %></span>
+                  <p><%= event[:date] %> • <%= event[:country] %></p>
+                  <p><%= event[:type] %></p>
+                  <button class="event-card__button" data-action="click->flip#toggle">En savoir plus →</button>
+                </div>
+
+                <%# BACK %>
+                <div class="event-card__back">
+                  <h4><%= event[:title] %></h4>
+                  <p>Ville : <%= event[:location] %></p>
+                  <p>Dans <%= (event[:date] - Date.today).to_i %> jours</p>
+                  <p>Distance : <%= event[:distance_km] %> km</p>
+                  <p>Dénivelé : <%= event[:denivele] %> m</p>
+                  <br>
+                  <button class="event-card__button_tier">
+                    <a href="<%= event[:source_url] %>" target="_blank">Voir l'événement</a>
+                  </button>
+                  <%= link_to "Créer un goal", "/events/#{event[:id]}/goals/new", class: "event-card__button_second" %>
+                  <button class="event-card__button" data-action="click->flip#toggle">← Retour</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
-</div>

@@ -1,5 +1,7 @@
+<h1 class="page-title">
+  <span class="animated-title">Set your goal</span>
+</h1>
 <%= simple_form_for [@event, @goal], html: { class: "mt-4 container col-6" } do |f| %>
-  <h1 class="text-center mb-4">Set your goal</h1>
   <%= f.input :start_date, :as => :date,
     label: "When can you start your training program ?",
     input_html: { class: "form-control" },

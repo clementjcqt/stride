@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h1>Mon Profil</h1>
+
+  <p><strong>Prénom :</strong> <%= @user.first_name %></p>
+  <p><strong>Nom :</strong> <%= @user.last_name %></p>
+  <p><strong>Âge :</strong> <%= @user.age %></p>
+  <p><strong>Genre :</strong> <%= @user.gender %></p>
+  <p><strong>Poids :</strong> <%= @user.weight %> kg</p>
+  <p><strong>Taille :</strong> <%= @user.height %> cm</p>
+  <p><strong>Niveau :</strong> <%= @user.level %></p>
+  <p><strong>Conditions médicales / blessures :</strong> <%= @user.conditions&.join(", ") %></p>
+  <p><strong>Disponibilités :</strong> <%= @user.availability&.values&.join(", ") %></p>
+
+
+  <%= link_to "Modifier mon profil", edit_profile_path, class: "btn btn-primary mt-3" %>
+</div>
